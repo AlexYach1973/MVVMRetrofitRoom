@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherAPI</string>
+
+<!--     WeatherListFragment-->
+    <string name="name_city">name City</string>
+<!--     menu-->
+    <string name="delete_local">delete local</string>
+
+
+</resources>
