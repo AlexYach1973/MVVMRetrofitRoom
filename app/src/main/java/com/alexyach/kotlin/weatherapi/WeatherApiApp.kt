@@ -1,11 +1,6 @@
 package com.alexyach.kotlin.weatherapi
 
 import android.app.Application
-import android.net.ConnectivityManager
-import android.net.Network
-import android.util.Log
-import androidx.core.content.ContextCompat.getSystemService
-import androidx.lifecycle.MutableLiveData
 import androidx.room.Room
 import com.alexyach.kotlin.weatherapi.room.WeatherDataBase
 
@@ -33,7 +28,5 @@ class WeatherApiApp : Application() {
             }
             return weatherDataBase!!
         }
-
     }
-
 }

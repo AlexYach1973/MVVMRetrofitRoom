@@ -1,10 +1,25 @@
 <resources>
-    <string name="app_name">WeatherAPI</string>
+    <string name="app_name">ПОГОДА</string>
 
 <!--     WeatherListFragment-->
     <string name="name_city">name City</string>
 <!--     menu-->
-    <string name="delete_local">delete local</string>
+    <string name="delete_local">видалити локульну БД</string>
+
+<!--    WeatherListFragment, Dialog-->
+    <string name="dialog_title">Допуск до локації</string>
+    <string name="dialog_massage">Геолоеація без допуску не працює</string>
+    <string name="set_positive_button">Погодитись</string>
+    <string name="set_negative_button">Ні в якму разі || </string>
+
+<!--    WeatherListFragment Toast-->
+    <string name="no_gps">Немає GPS !!!</string>
+    <string name="no_internet">Немає інтернету</string>
+    <string name="field_empty">Порожнє поле</string>
+    <string name="not_found_city">Немає такого міста</string>
+
+<!--    RepositoryRetrofitImpl-->
+    <string name="error_limit_out">Перевищений ліміт</string>
 
 
 </resources>

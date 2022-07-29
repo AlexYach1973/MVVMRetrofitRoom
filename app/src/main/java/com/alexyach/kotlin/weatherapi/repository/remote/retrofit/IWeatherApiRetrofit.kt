@@ -13,4 +13,11 @@ interface IWeatherApiRetrofit {
         @Query(WEATHER_API_KEY_NAME) keyValue: String,
         @Query("q") nameCity: String
     ): Call<WeatherDTO>
+
+    @GET("/data/2.5/weather")
+    fun getWeatherByLocation(
+        @Query(WEATHER_API_KEY_NAME) keyValue: String,
+        @Query("lat") lat: Double,
+        @Query("lon") lon: Double
+    ): Call<WeatherDTO>
 }

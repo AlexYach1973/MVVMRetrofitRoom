@@ -2,9 +2,8 @@ package com.alexyach.kotlin.weatherapi.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
-import java.util.*
 
-//@Parcelize
+@Parcelize
 data class WeatherModel(
     var cityName: String = "",
     val lat: Double = 50.4333,
@@ -15,7 +14,7 @@ data class WeatherModel(
     val description: String = "",
     val date: String = "зараз",
     val icon: String = "android.R.drawable.ic_lock_idle_lock"
-) /*: Parcelable*/
+) : Parcelable
 
 fun getWorldCities(): List<WeatherModel> {
     return listOf(

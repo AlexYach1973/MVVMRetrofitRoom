@@ -17,7 +17,7 @@ interface IWeatherDAO {
     @Update
     fun updateWeather(weatherEntity: WeatherEntity)
 
-    // Удалить ВСЕ
+    // Видилити ВСЕ
     @Query("DELETE FROM WeatherEntity")
     fun deleteAll()
 

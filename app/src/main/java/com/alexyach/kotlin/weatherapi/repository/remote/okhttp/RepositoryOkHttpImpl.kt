@@ -2,15 +2,14 @@ package com.alexyach.kotlin.weatherapi.repository.remote.okhttp
 
 import com.alexyach.kotlin.weatherapi.model.weatherDTO.WeatherDTO
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
-import com.alexyach.kotlin.weatherapi.repository.IRepositoryWeatherDetails
-import com.alexyach.kotlin.weatherapi.utils.WEATHER_API_KEY_NAME
+import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.utils.WEATHER_API_KEY_VALUE
 import com.alexyach.kotlin.weatherapi.utils.converterWeatherDtoToWeatherModel
 import com.google.gson.Gson
 import okhttp3.*
 import java.io.IOException
 
-class RepositoryOkHttpImpl : IRepositoryWeatherDetails {
+class RepositoryOkHttpImpl : IRepositoryByCityName {
 
     val client = OkHttpClient()
     val builder = Request.Builder()

@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         // Network
-        private var onNetwork:MutableLiveData<Boolean> = MutableLiveData<Boolean>()
+        private var onNetwork: MutableLiveData<Boolean> = MutableLiveData<Boolean>()
         fun getOnNetwork(): MutableLiveData<Boolean> = onNetwork
         fun setOnNetwork(b: Boolean) {
             // Викликається з фонового потоку: ConnectivityThread
@@ -60,6 +60,5 @@ class MainActivity : AppCompatActivity() {
             onNetwork.postValue(b)
         }
     }
-
-
 }
+

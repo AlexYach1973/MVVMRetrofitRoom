@@ -60,6 +60,17 @@
     </FrameLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/weatherListFragmentFABLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@android:drawable/ic_dialog_map"
+        app:layout_constraintBottom_toTopOf="@+id/weather_list_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="56dp" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/weather_list_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

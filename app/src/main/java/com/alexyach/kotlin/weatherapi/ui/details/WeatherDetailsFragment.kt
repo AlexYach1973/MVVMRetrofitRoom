@@ -14,8 +14,8 @@ import com.alexyach.kotlin.weatherapi.MainActivity.Companion.getOnNetwork
 import com.alexyach.kotlin.weatherapi.R
 import com.alexyach.kotlin.weatherapi.databinding.FragmentWeatherDetailsBinding
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
-import com.alexyach.kotlin.weatherapi.utils.KEY_PARAM_CITY_NAME
 import com.alexyach.kotlin.weatherapi.utils.KEY_PARAM_IS_NETWORK
+import com.alexyach.kotlin.weatherapi.utils.KEY_PARAM_WEATHER
 import com.alexyach.kotlin.weatherapi.utils.loadImageWeather
 import kotlin.properties.Delegates
 
@@ -23,10 +23,8 @@ class WeatherDetailsFragment : Fragment() {
 
     private lateinit var viewModel: WeatherDetailsViewModel
 
-    lateinit var currentCityName: String
+    lateinit var currentWeather: WeatherModel
     var isNetwork by Delegates.notNull<Boolean>()
-
-//    private var isNetwork: Boolean = true
 
     private var _binding: FragmentWeatherDetailsBinding? = null
     private val binding: FragmentWeatherDetailsBinding
@@ -45,11 +43,14 @@ class WeatherDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(WeatherDetailsViewModel::class.java)
 
-        currentCityName = arguments?.getString(KEY_PARAM_CITY_NAME)?: ""
-        isNetwork = arguments?.getBoolean(KEY_PARAM_IS_NETWORK)?: false
+        currentWeather = arguments?.run {
+            getParcelable<WeatherModel>(KEY_PARAM_WEATHER)
+        } ?: WeatherModel()
+
+        isNetwork = arguments?.getBoolean(KEY_PARAM_IS_NETWORK) ?: false
 
         // Завантажуємо дані
-            viewModel.getWeatherDetailsFromRepository(currentCityName, isNetwork)
+        viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
 
         /** Спостереження */
         viewModel.getWeatherDetailsAppState().observe(viewLifecycleOwner) {
@@ -59,11 +60,10 @@ class WeatherDetailsFragment : Fragment() {
         getOnNetwork().observe(viewLifecycleOwner, object : Observer<Boolean> {
             override fun onChanged(network: Boolean) {
                 isNetwork = network
-                viewModel.getWeatherDetailsFromRepository(currentCityName, isNetwork)
+                viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
             }
 
         })
-
     }
 
     private fun getResponseAppState(state: WeatherDetailsAppState) {
@@ -92,7 +92,7 @@ class WeatherDetailsFragment : Fragment() {
             detailsFragmentHumidity.text = "вологість: " +
                     weather.humidity + "%"
             detailsFragmentPressure.text = "тиск: " + weather.pressure.toString() + " hPa"
-            detailsFragmentCityCoordinates.text = "${weather.lat}/${weather.lon}"
+            detailsFragmentCityCoordinates.text = "lat: ${weather.lat} lon: ${weather.lon}"
             detailsFragmentDescriptionWeather.text = weather.description
             detailsFragmentDate.text = " дата: ${weather.date} "
 
@@ -119,10 +119,10 @@ class WeatherDetailsFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(cityName: String, isNetwork: Boolean): WeatherDetailsFragment {
+        fun newInstance(weather: WeatherModel, isNetwork: Boolean): WeatherDetailsFragment {
             val fragment = WeatherDetailsFragment()
             fragment.arguments = Bundle().apply {
-                putString(KEY_PARAM_CITY_NAME, cityName)
+                putParcelable(KEY_PARAM_WEATHER, weather)
                 putBoolean(KEY_PARAM_IS_NETWORK, isNetwork)
             }
             return fragment
