@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.model.getWorldCities
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
-import com.alexyach.kotlin.weatherapi.repository.local.IResponseRoomCallback
 import com.alexyach.kotlin.weatherapi.repository.local.RepositoryRoomImpl
 import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.RepositoryRetrofitImpl
 
@@ -52,11 +51,9 @@ class WeatherListViewModel(
 
     // Завантаження міст з Room
     private fun getCityListFromRoom() {
-        RepositoryRoomImpl().getWeatherAll(object : IResponseRoomCallback {
-            override fun onResponse(weathers: List<WeatherModel>) {
-                listWeather.postValue(weathers)
-            }
-        })
+        RepositoryRoomImpl().getWeatherAll(){weathersFromRoom ->
+            listWeather.postValue(weathersFromRoom)
+        }
     }
 
     fun deleteAllFromRoom(){

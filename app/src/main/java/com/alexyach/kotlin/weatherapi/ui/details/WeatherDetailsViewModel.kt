@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
-import com.alexyach.kotlin.weatherapi.repository.local.IResponseRoomCallback
 import com.alexyach.kotlin.weatherapi.repository.local.RepositoryRoomImpl
 import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.RepositoryRetrofitImpl
 import com.alexyach.kotlin.weatherapi.utils.KEY_GET_WEATHER_BY
@@ -104,18 +103,15 @@ class WeatherDetailsViewModel(
     private fun saveOrUpdateRoom(weather: WeatherModel, network: Boolean) {
         if (!network) return
 
-        RepositoryRoomImpl().getWeatherAll(object : IResponseRoomCallback {
-            override fun onResponse(weathers: List<WeatherModel>) {
-
-                if ((weathers.filter { it.cityName == weather.cityName }).isEmpty()) {
-                    // Записуємо
-                    RepositoryRoomImpl().saveWeatherToRoom(weather)
-                } else {
-                    // Оновлюємо
-                    RepositoryRoomImpl().updateWeather(weather)
-                }
+        RepositoryRoomImpl().getWeatherAll() {weathersFromRoom ->
+            if ((weathersFromRoom.filter { it.cityName == weather.cityName }).isEmpty()) {
+                // Записуємо
+                RepositoryRoomImpl().saveWeatherToRoom(weather)
+            } else {
+                // Оновлюємо
+                RepositoryRoomImpl().updateWeather(weather)
             }
-        })
+        }
     }
 
 }

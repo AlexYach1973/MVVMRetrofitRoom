@@ -10,6 +10,7 @@ import com.alexyach.kotlin.weatherapi.utils.converterWeatherModelToWeatherEntity
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.HashMap
 
 class RepositoryRoomImpl : IRepositoryByCityName, IWeatherRoom {
     override fun getWeatherDetailsByCityName(
@@ -32,11 +33,10 @@ class RepositoryRoomImpl : IRepositoryByCityName, IWeatherRoom {
         }.start()
     }
 
-    override fun getWeatherAll(callback: IResponseRoomCallback) {
-
+    override fun getWeatherAll(callback: (List<WeatherModel>) -> Unit) {
         Thread {
             val weatherEntity = WeatherApiApp.getWeatherDataBase().weatherDao().getWeatherAll()
-            callback.onResponse(weatherEntity.map {
+            callback(weatherEntity.map {
                 converterWeatherEntityToWeatherModel(it)
             })
         }.start()
@@ -68,5 +68,4 @@ class RepositoryRoomImpl : IRepositoryByCityName, IWeatherRoom {
             WeatherApiApp.getWeatherDataBase().weatherDao().deleteAll()
         }.start()
     }
-
 }
