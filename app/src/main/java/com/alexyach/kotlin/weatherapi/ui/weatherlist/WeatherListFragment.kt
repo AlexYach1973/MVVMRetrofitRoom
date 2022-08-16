@@ -11,55 +11,46 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.alexyach.kotlin.weatherapi.MainActivity.Companion.getOnNetwork
 import com.alexyach.kotlin.weatherapi.R
 import com.alexyach.kotlin.weatherapi.databinding.FragmentWeatherListBinding
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
+import com.alexyach.kotlin.weatherapi.ui.base.BaseFragment
 import com.alexyach.kotlin.weatherapi.ui.details.WeatherDetailsFragment
 import com.alexyach.kotlin.weatherapi.utils.KEY_GET_WEATHER_BY
 import com.alexyach.kotlin.weatherapi.utils.REQUEST_CODE_LOCATION
 
-class WeatherListFragment : Fragment(), IOnItemClickAdapterWeatherList {
+class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
+        WeatherListViewModel>(), IOnItemClickAdapterWeatherList {
 
-    private lateinit var viewModel: WeatherListViewModel
+    override val viewModel: WeatherListViewModel by lazy {
+        ViewModelProvider(this)[WeatherListViewModel::class.java]
+    }
+
+    override fun getViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ) = FragmentWeatherListBinding.inflate(inflater, container, false)
+
     private lateinit var adapter: WeatherListAdapter
     private lateinit var locationManager: LocationManager
 
     private var isNetwork: Boolean = false
     private var networkOrRoom: Boolean = true
 
-    private var _binding: FragmentWeatherListBinding? = null
-    private val binding: FragmentWeatherListBinding
-        get() {
-            return _binding!!
-        }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentWeatherListBinding.inflate(inflater)
-
-        locationManager =
-            requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         // Menu
         setHasOptionsMenu(true)
 
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(this).get(WeatherListViewModel::class.java)
+        locationManager =
+            requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         // Спостереження
         observingLiveData()
@@ -86,10 +77,7 @@ class WeatherListFragment : Fragment(), IOnItemClickAdapterWeatherList {
 
                     weather?.let {
                         if (weather.cityName == "-1") {
-                            Toast.makeText(
-                                requireActivity(), R.string.not_found_city,
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            toast(R.string.not_found_city)
                         } else {
                             goToWeatherDetailsFragment(weather)
                         }
@@ -115,7 +103,7 @@ class WeatherListFragment : Fragment(), IOnItemClickAdapterWeatherList {
             val nameCity = binding.weatherListEditText.text.toString()
 
             if (nameCity.isEmpty()) {
-                Toast.makeText(requireActivity(), R.string.field_empty, Toast.LENGTH_SHORT).show()
+                toast(R.string.field_empty)
                 return@setOnClickListener
             }
             viewModel.searchWeatherByNameCity(nameCity)
@@ -130,7 +118,7 @@ class WeatherListFragment : Fragment(), IOnItemClickAdapterWeatherList {
             if (!isNetwork) {
                 viewModel.getCityList(false)
                 showViewWhenIsNetwork(false)
-                Toast.makeText(requireActivity(), R.string.no_internet, Toast.LENGTH_SHORT).show()
+                toast(R.string.no_internet)
                 return@setOnClickListener
             }
 
@@ -168,7 +156,7 @@ class WeatherListFragment : Fragment(), IOnItemClickAdapterWeatherList {
                     )
                 }
             } else {
-                Toast.makeText(requireContext(), R.string.no_gps, Toast.LENGTH_SHORT).show()
+                toast(R.string.no_gps)
             }
     }
 
@@ -296,14 +284,8 @@ class WeatherListFragment : Fragment(), IOnItemClickAdapterWeatherList {
         imm.hideSoftInputFromWindow(view?.windowToken, 0)
     }
 
-
     companion object {
         fun newInstance() = WeatherListFragment()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
     }
 
 }

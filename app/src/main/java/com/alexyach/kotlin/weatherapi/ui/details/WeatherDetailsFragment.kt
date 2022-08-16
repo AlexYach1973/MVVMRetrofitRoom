@@ -5,43 +5,36 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import coil.load
 import com.alexyach.kotlin.weatherapi.MainActivity.Companion.getOnNetwork
 import com.alexyach.kotlin.weatherapi.R
 import com.alexyach.kotlin.weatherapi.databinding.FragmentWeatherDetailsBinding
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
+import com.alexyach.kotlin.weatherapi.ui.base.BaseFragment
 import com.alexyach.kotlin.weatherapi.utils.KEY_PARAM_IS_NETWORK
 import com.alexyach.kotlin.weatherapi.utils.KEY_PARAM_WEATHER
 import com.alexyach.kotlin.weatherapi.utils.loadImageWeather
 import kotlin.properties.Delegates
 
-class WeatherDetailsFragment : Fragment() {
+class WeatherDetailsFragment : BaseFragment<FragmentWeatherDetailsBinding,
+        WeatherDetailsViewModel>() {
 
-    private lateinit var viewModel: WeatherDetailsViewModel
+    override val viewModel: WeatherDetailsViewModel by lazy {
+        ViewModelProvider(this)[WeatherDetailsViewModel::class.java]
+    }
 
     lateinit var currentWeather: WeatherModel
+
     var isNetwork by Delegates.notNull<Boolean>()
 
-    private var _binding: FragmentWeatherDetailsBinding? = null
-    private val binding: FragmentWeatherDetailsBinding
-        get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentWeatherDetailsBinding.inflate(inflater)
-
-        return binding.root
-    }
+    override fun getViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ) = FragmentWeatherDetailsBinding.inflate(inflater, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this).get(WeatherDetailsViewModel::class.java)
 
         currentWeather = arguments?.run {
             getParcelable<WeatherModel>(KEY_PARAM_WEATHER)
@@ -54,13 +47,11 @@ class WeatherDetailsFragment : Fragment() {
             getResponseAppState(it)
         }
         // мережа
-        getOnNetwork().observe(viewLifecycleOwner, object : Observer<Boolean> {
-            override fun onChanged(network: Boolean) {
-                isNetwork = network
-                viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
-            }
-
-        })
+        getOnNetwork().observe(viewLifecycleOwner
+        ) { network ->
+            isNetwork = network
+            viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
+        }
     }
 
     private fun getResponseAppState(state: WeatherDetailsAppState) {
@@ -68,10 +59,10 @@ class WeatherDetailsFragment : Fragment() {
             is WeatherDetailsAppState.SuccessGetDetailsWeather -> {
                 renderData(state.weather)
                 showResult()
-
             }
+
             is WeatherDetailsAppState.ErrorGetDetailsWeather -> {
-                Toast.makeText(requireActivity(), state.errorString, Toast.LENGTH_LONG).show()
+                toast(state.errorString)
                 showResult()
             }
 
@@ -98,7 +89,6 @@ class WeatherDetailsFragment : Fragment() {
                 placeholder(R.drawable.loadingfast)
                 error(android.R.drawable.ic_menu_info_details)
             }
-
         }
     }
 
@@ -127,8 +117,4 @@ class WeatherDetailsFragment : Fragment() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
 }
