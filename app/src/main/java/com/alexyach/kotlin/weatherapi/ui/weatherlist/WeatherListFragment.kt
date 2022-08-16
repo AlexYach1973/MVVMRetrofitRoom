@@ -289,7 +289,7 @@ class WeatherListFragment : Fragment(), IOnItemClickAdapterWeatherList {
         }
     }
 
-    // Скрыть клавиатуру
+    // Сховати клавіатуру
     private fun hideKeyboardFrom(context: Context, view: View?) {
         val imm =
             context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager

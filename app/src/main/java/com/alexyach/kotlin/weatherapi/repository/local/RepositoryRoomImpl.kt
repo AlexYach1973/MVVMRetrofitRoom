@@ -10,9 +10,9 @@ import com.alexyach.kotlin.weatherapi.utils.converterWeatherModelToWeatherEntity
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.HashMap
 
 class RepositoryRoomImpl : IRepositoryByCityName, IWeatherRoom {
+
     override fun getWeatherDetailsByCityName(
         cityName: String,
         callbackResponse: ICallbackResponse
@@ -27,6 +27,7 @@ class RepositoryRoomImpl : IRepositoryByCityName, IWeatherRoom {
                 callbackResponse.onCallbackResponse(
                     converterWeatherEntityToWeatherModel(weatherEntity)
                 )
+
             } else {
                 callbackResponse.onCallbackFailure(IOException("Нема такого міста в локальній базі"))
             }
@@ -42,8 +43,10 @@ class RepositoryRoomImpl : IRepositoryByCityName, IWeatherRoom {
         }.start()
     }
 
+    // Запис та оновлення відбуваються в фоновому потоці метода getWeatherAll(),
+    // тому Thread-и закомічені
     override fun saveWeatherToRoom(weather: WeatherModel) {
-        val currentDate = SimpleDateFormat("dd.M.yy hh:mm:ss", Locale.ENGLISH).format(Date())
+        val currentDate = SimpleDateFormat("dd MMM yyyy hh:mm:ss", Locale.ENGLISH).format(Date())
         val weatherEntity = converterWeatherModelToWeatherEntity(weather).apply {
             date = currentDate
         }
@@ -51,8 +54,6 @@ class RepositoryRoomImpl : IRepositoryByCityName, IWeatherRoom {
 //        Thread {
             WeatherApiApp.getWeatherDataBase().weatherDao().insertWeather(weatherEntity)
 //        }.start()
-
-
     }
 
     override fun updateWeather(weather: WeatherModel) {

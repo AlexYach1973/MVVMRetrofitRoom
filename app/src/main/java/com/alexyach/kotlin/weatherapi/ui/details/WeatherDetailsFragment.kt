@@ -49,9 +49,6 @@ class WeatherDetailsFragment : Fragment() {
 
         isNetwork = arguments?.getBoolean(KEY_PARAM_IS_NETWORK) ?: false
 
-        // Завантажуємо дані
-        viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
-
         /** Спостереження */
         viewModel.getWeatherDetailsAppState().observe(viewLifecycleOwner) {
             getResponseAppState(it)
@@ -71,6 +68,7 @@ class WeatherDetailsFragment : Fragment() {
             is WeatherDetailsAppState.SuccessGetDetailsWeather -> {
                 renderData(state.weather)
                 showResult()
+
             }
             is WeatherDetailsAppState.ErrorGetDetailsWeather -> {
                 Toast.makeText(requireActivity(), state.errorString, Toast.LENGTH_LONG).show()

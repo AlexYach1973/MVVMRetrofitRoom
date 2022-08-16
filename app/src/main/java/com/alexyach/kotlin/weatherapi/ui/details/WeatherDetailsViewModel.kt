@@ -3,6 +3,7 @@ package com.alexyach.kotlin.weatherapi.ui.details
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.alexyach.kotlin.weatherapi.WeatherApiApp.Companion.getWeatherApiApp
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
@@ -10,12 +11,18 @@ import com.alexyach.kotlin.weatherapi.repository.local.RepositoryRoomImpl
 import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.RepositoryRetrofitImpl
 import com.alexyach.kotlin.weatherapi.utils.KEY_GET_WEATHER_BY
 
+const val TAG = "myLogs"
+
 class WeatherDetailsViewModel(
     private val weatherDetailsAppState: MutableLiveData<WeatherDetailsAppState> =
         MutableLiveData<WeatherDetailsAppState>()
 ) : ViewModel() {
 
+
     private lateinit var repository: IRepositoryByCityName
+
+    // Test variable
+    var testInt = 0
 
     /** LiveData */
     fun getWeatherDetailsAppState(): MutableLiveData<WeatherDetailsAppState> {
@@ -25,16 +32,15 @@ class WeatherDetailsViewModel(
     fun getWeatherDetailsFromRepository(weather: WeatherModel, network: Boolean) {
         // Обираємо репозиторій
         choiceRepository(network)
+
         // Відображаємо іконку завантаження
         weatherDetailsAppState.value = WeatherDetailsAppState.Loading
 
         // Отримаємо дані
-
         if (weather.cityName == KEY_GET_WEATHER_BY) {
             getWeatherByLocation(weather)
         } else {
             getWeatherByCityName(weather, network)
-
         }
     }
 
@@ -66,7 +72,7 @@ class WeatherDetailsViewModel(
                 WeatherDetailsAppState
                     .ErrorGetDetailsWeather("Помилка: ${"По координатах тількі з інтернетом"}")
             )
-            Log.d("myLogs", "По координатах тількі з інтернетом")
+            Log.d(TAG, "По координатах тількі з інтернетом")
         }
     }
 
@@ -90,6 +96,7 @@ class WeatherDetailsViewModel(
                 )
             }
         })
+
     }
 
     private fun choiceRepository(network: Boolean) {
@@ -100,14 +107,16 @@ class WeatherDetailsViewModel(
         }
     }
 
-    private fun saveOrUpdateRoom(weather: WeatherModel, network: Boolean) {
+    fun saveOrUpdateRoom(weather: WeatherModel, network: Boolean) {
         if (!network) return
 
         RepositoryRoomImpl().getWeatherAll() {weathersFromRoom ->
             if ((weathersFromRoom.filter { it.cityName == weather.cityName }).isEmpty()) {
+
                 // Записуємо
                 RepositoryRoomImpl().saveWeatherToRoom(weather)
             } else {
+
                 // Оновлюємо
                 RepositoryRoomImpl().updateWeather(weather)
             }

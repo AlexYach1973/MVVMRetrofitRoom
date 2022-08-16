@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 fun converterWeatherDtoToWeatherModel(weather: WeatherDTO): WeatherModel {
-    val currentDate: String = SimpleDateFormat("dd.MMM.yy hh:mm:ss", Locale.ENGLISH)
+    val currentDate: String = SimpleDateFormat("dd MMM yyyy hh:mm:ss", Locale.ENGLISH)
         .format(Date())
 
     return WeatherModel(
@@ -38,7 +38,7 @@ fun converterWeatherEntityToWeatherModel(weather: WeatherEntity) : WeatherModel 
 }
 
 fun converterWeatherModelToWeatherEntity(weather: WeatherModel) : WeatherEntity {
-    val currentDate: String = SimpleDateFormat("dd.MMM.yy hh:mm:ss", Locale.ENGLISH)
+    val currentDate: String = SimpleDateFormat("dd MMM yyyy hh:mm:ss", Locale.ENGLISH)
         .format(Date())
     return WeatherEntity(
         0,
