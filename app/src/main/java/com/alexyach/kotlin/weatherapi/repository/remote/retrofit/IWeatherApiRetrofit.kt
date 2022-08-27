@@ -1,6 +1,6 @@
 package com.alexyach.kotlin.weatherapi.repository.remote.retrofit
 
-import com.alexyach.kotlin.weatherapi.model.weatherDTO.WeatherDTO
+import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.weatherDTO.WeatherDTO
 import com.alexyach.kotlin.weatherapi.utils.*
 import retrofit2.Call
 import retrofit2.http.GET

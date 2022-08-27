@@ -1,0 +1,208 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+title
+UML- діаграмма додатку Weather API
+end title
+
+package Model #FFFFCC {
+    class WeatherModel {
+        + cityName: String
+        + lat: Double
+        + lon: Double
+        + temperature: Double
+        ...
+        + getWorldCities(): List<WeatherModel>
+    }
+}
+
+package UI #00CCFF {
+
+    class MainActivity {
+    - {static}onNetwork: MutableLiveData<Boolean>
+    + {static}getOnNetwork(): MutableLiveData<Boolean>
+    }
+    abstract class BaseFragment{
+     #binding
+     #viewModel
+    }
+
+    class WeatherListFragment{
+        - binding
+        - viewModel
+        + getWeatherByNameCity().observe()
+    }
+    class WeatherListViewModel{
+    - listWeather: MutableLiveData<List<WeatherModel>>
+    - repository: IRepositoryByCityName
+    + getWeatherByNameCity(): MutableLiveData<WeatherModel>
+    + searchWeatherByNameCity(cityName: String):WeatherModel
+    + getCityListFromModel(): List<WeatherModel>
+    + getCityListFromRoom(): List<WeatherModel>
+    + deleteAllFromRoom()
+    }
+
+    class WeatherDetailsFragment{
+        - binding
+        - viewModel
+        + getWeatherDetailsAppState().observe()
+    }
+
+    class WeatherDetailsViewModel{
+        - weatherDetailsAppState: MutableLiveData<WeatherDetailsAppState>
+        - repository: IRepositoryByCityName
+        + getWeatherDetailsAppState(): MutableLiveData<WeatherDetailsAppState>
+        + getWeatherByCityName(weather: WeatherModel, network: Boolean)
+        + getWeatherByLocation(weather: WeatherModel)
+        + saveOrUpdateRoom(weather: WeatherModel, network: Boolean)
+    }
+
+}
+
+
+package AppState {
+
+class WeatherDetailsAppState {
+
+        + {abstract} Loading
+        }
+    class SuccessGetDetailsWeather {
+        + weather: WeatherModel
+    }
+    class ErrorGetDetailsWeather{
+        + errorString: String
+    }
+
+}
+
+package Repository #66FF99 {
+    interface IRepositoryByCityName {
+    {abstract}getWeatherDetailsByCityName(cityName: String, callbackResponse: ICallbackResponse)
+     }
+    interface IRepositoryByLocation {
+    {abstract}getWeatherDetailsByLocation(lat: Double, lon: Double, callbackResponse: ICallbackResponse)
+    }
+    interface ICallbackResponse {
+        {abstract}onCallbackResponse(callbackWeather: WeatherModel)
+        {abstract}onCallbackFailure(e: Exception)
+    }
+
+
+    package local {
+        interface IWeatherRoom {
+            + {abstract}getWeatherAll(callback : (List<WeatherModel>) -> Unit)
+            + {abstract}saveWeatherToRoom(weather: WeatherModel)
+            + {abstract}updateWeather(weather: WeatherModel)
+            + {abstract}deleteAll()
+        }
+        class RepositoryRoomImpl {
+            + getWeatherDetailsByCityName(cityName: String,callbackResponse: ICallbackResponse)
+            + getWeatherAll(callback: (List<WeatherModel>) -> Unit)
+            + saveWeatherToRoom(weather: WeatherModel)
+            + updateWeather(weather: WeatherModel)
+            + deleteAll()
+        }
+    }
+
+    package remote.retrofit {
+        class WeatherDTO {
+            + cityName: String
+            + lat: Double
+            + lon: Double
+            + temperature: Double
+            ...
+        }
+
+        interface IWeatherApiRetrofit {
+        + {abstract}getWeatherByCityName(): Call<WeatherDTO>
+        + {abstract}getWeatherByLocation(): Call<WeatherDTO>
+        }
+        class RepositoryRetrofitImpl {
+        - api: IWeatherApiRetrofit
+        + getWeatherDetailsByCityName(cityName: String,callbackResponse: ICallbackResponse)
+        + getWeatherDetailsByLocation(lat: Double,lon: Double,callbackResponse: ICallbackResponse)
+        }
+    }
+}
+
+
+'ROOM
+database "SQLite" {
+package "ROOM" #DDDDDD {
+    abstract class WeatherDataBase{
+    weatherDao(): IWeatherDAO
+    }
+    class WeatherEntity{
+        + cityName: String
+        + lat: Double
+        + lon: Double
+        + temperature: Double
+        ...
+    }
+    interface IWeatherDAO{
+    + {abstract}insertWeather(weatherEntity: WeatherEntity)
+    + {abstract}getWeatherAll(): List<WeatherEntity>
+    + {abstract}getWeatherByName(name: String): WeatherEntity
+    + {abstract}updateWeather(weatherEntity: WeatherEntity)
+    + {abstract}deleteAll()
+    }
+}
+
+
+'UI
+MainActivity *-- BaseFragment
+BaseFragment <|-- WeatherListFragment
+BaseFragment <|-- WeatherDetailsFragment
+WeatherListFragment *-- WeatherListViewModel
+WeatherDetailsFragment *-- WeatherDetailsViewModel
+
+WeatherDetailsViewModel o-- RepositoryRetrofitImpl
+WeatherDetailsViewModel o-- RepositoryRoomImpl
+
+'AppState
+WeatherDetailsAppState <|-- SuccessGetDetailsWeather
+WeatherDetailsAppState <|-- ErrorGetDetailsWeather
+WeatherDetailsViewModel o-- WeatherDetailsAppState
+
+WeatherListViewModel o-- WeatherModel
+WeatherListViewModel o-- RepositoryRoomImpl
+WeatherListViewModel o-- RepositoryRetrofitImpl
+
+
+'Repository
+IRepositoryByCityName <|.. ICallbackResponse
+IRepositoryByLocation <|.. ICallbackResponse
+
+'Local
+RepositoryRoomImpl <|.. IWeatherRoom
+RepositoryRoomImpl <|.. IRepositoryByCityName
+
+IWeatherRoom o-- ROOM
+
+'remote
+RepositoryRetrofitImpl <|.. IWeatherApiRetrofit
+RepositoryRetrofitImpl <|.. IRepositoryByCityName
+RepositoryRetrofitImpl <|.. IRepositoryByLocation
+IWeatherApiRetrofit <|.. WeatherDTO
+
+'Room
+WeatherDataBase <|.. IWeatherDAO
+WeatherDataBase *-- WeatherEntity
+
+'allowmixing
+'package UI
+'package Model
+'package Repository
+
+'together {
+'class WeatherModel
+'class WeatherListFragment
+'}
+'WeatherModel-[hidden]-->WeatherListFragment
+
+
+'UI-[hidden]-->WeatherDetailsAppState
+
+'UI-[hidden]-->AppState
+'Model-[hidden]-->UI
+@enduml

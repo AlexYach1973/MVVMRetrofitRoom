@@ -1,6 +1,6 @@
 package com.alexyach.kotlin.weatherapi.repository.remote.okhttp
 
-import com.alexyach.kotlin.weatherapi.model.weatherDTO.WeatherDTO
+import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.weatherDTO.WeatherDTO
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.utils.WEATHER_API_KEY_VALUE

@@ -1,7 +1,7 @@
 package com.alexyach.kotlin.weatherapi.utils
 
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
-import com.alexyach.kotlin.weatherapi.model.weatherDTO.WeatherDTO
+import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.weatherDTO.WeatherDTO
 import com.alexyach.kotlin.weatherapi.room.WeatherEntity
 import java.text.SimpleDateFormat
 import java.util.*

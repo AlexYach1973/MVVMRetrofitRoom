@@ -1,6 +1,6 @@
 package com.alexyach.kotlin.weatherapi.repository.remote.retrofit
 
-import com.alexyach.kotlin.weatherapi.model.weatherDTO.WeatherDTO
+import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.weatherDTO.WeatherDTO
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByLocation
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
