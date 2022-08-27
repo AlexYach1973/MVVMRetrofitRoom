@@ -108,12 +108,12 @@ class WeatherDetailsFragment : BaseFragment<FragmentWeatherDetailsBinding,
 
     companion object {
         fun newInstance(weather: WeatherModel, isNetwork: Boolean): WeatherDetailsFragment {
-            val fragment = WeatherDetailsFragment()
-            fragment.arguments = Bundle().apply {
-                putParcelable(KEY_PARAM_WEATHER, weather)
-                putBoolean(KEY_PARAM_IS_NETWORK, isNetwork)
-            }
-            return fragment
+           return WeatherDetailsFragment().apply {
+                arguments = Bundle().apply {
+                   putParcelable(KEY_PARAM_WEATHER, weather)
+                   putBoolean(KEY_PARAM_IS_NETWORK, isNetwork)
+               }
+           }
         }
     }
 

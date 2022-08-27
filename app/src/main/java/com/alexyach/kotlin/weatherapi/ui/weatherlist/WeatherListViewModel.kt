@@ -7,6 +7,7 @@ import com.alexyach.kotlin.weatherapi.model.getWorldCities
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.local.RepositoryRoomImpl
 import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.RepositoryRetrofitImpl
+import com.alexyach.kotlin.weatherapi.utils.NOT_FOUND_CITY
 
 class WeatherListViewModel(
     private val listWeather: MutableLiveData<List<WeatherModel>> =
@@ -38,7 +39,7 @@ class WeatherListViewModel(
 
             override fun onCallbackFailure(e: Exception) {
                 weatherByNameCity.postValue(WeatherModel().apply {
-                    this.cityName = "-1"
+                    this.cityName = NOT_FOUND_CITY
                 })
             }
         })

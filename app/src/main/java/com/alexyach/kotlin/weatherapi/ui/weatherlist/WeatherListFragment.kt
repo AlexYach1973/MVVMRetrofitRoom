@@ -16,6 +16,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.alexyach.kotlin.weatherapi.MainActivity
 import com.alexyach.kotlin.weatherapi.MainActivity.Companion.getOnNetwork
 import com.alexyach.kotlin.weatherapi.R
 import com.alexyach.kotlin.weatherapi.databinding.FragmentWeatherListBinding
@@ -23,6 +24,7 @@ import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.ui.base.BaseFragment
 import com.alexyach.kotlin.weatherapi.ui.details.WeatherDetailsFragment
 import com.alexyach.kotlin.weatherapi.utils.KEY_GET_WEATHER_BY
+import com.alexyach.kotlin.weatherapi.utils.NOT_FOUND_CITY
 import com.alexyach.kotlin.weatherapi.utils.REQUEST_CODE_LOCATION
 
 class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
@@ -57,6 +59,7 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
 
         // FAB choice City
         buttonFABChoiceCityList()
+
         // FAB Location
         buttonFabLocation()
 
@@ -76,14 +79,13 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
                 override fun onChanged(weather: WeatherModel?) {
 
                     weather?.let {
-                        if (weather.cityName == "-1") {
+                        if (weather.cityName == NOT_FOUND_CITY) {
                             toast(R.string.not_found_city)
                         } else {
                             goToWeatherDetailsFragment(weather)
                         }
                     }
                 }
-
             })
 
         // Стан мережі
@@ -154,9 +156,11 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
                         Float.MAX_VALUE, // Це- милиця, щоб не оновлював постйно  дані
                         locationListener
                     )
+                } else {
+                    toast(R.string.no_gps)
                 }
             } else {
-                toast(R.string.no_gps)
+                Log.d("myLogs", "getLocation - немає дозволу")
             }
     }
 
@@ -169,12 +173,14 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
                     lon = location.longitude
                 )
             )
+//            Log.d("myLogs", "locationListener: ${location.latitude}/${location.longitude}")
         }
     }
 
     /** Permission  */
     private fun permissionRequest(permission: String) {
         requestPermissions(arrayOf(permission), REQUEST_CODE_LOCATION)
+//        ActivityCompat.requestPermissions(requireActivity(), arrayOf(permission), REQUEST_CODE_LOCATION)
     }
 
     private fun checkPermission(permission: String) {

@@ -18,11 +18,7 @@ class WeatherDetailsViewModel(
         MutableLiveData<WeatherDetailsAppState>()
 ) : ViewModel() {
 
-
     private lateinit var repository: IRepositoryByCityName
-
-    // Test variable
-    var testInt = 0
 
     /** LiveData */
     fun getWeatherDetailsAppState(): MutableLiveData<WeatherDetailsAppState> {

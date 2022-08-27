@@ -14,3 +14,6 @@
         <!-- Customize your theme here. -->
     </style>
 </resources>
+
+<!--    parent="Theme.MaterialComponents.DayNight.DarkActionBar"-->
+<!--    supportActionBar?.setDisplayShowHomeEnabled(true)-->

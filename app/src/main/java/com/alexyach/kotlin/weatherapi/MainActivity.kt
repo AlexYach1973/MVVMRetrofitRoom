@@ -5,8 +5,11 @@ import android.net.Network
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.lifecycle.MutableLiveData
 import com.alexyach.kotlin.weatherapi.databinding.ActivityMainBinding
 import com.alexyach.kotlin.weatherapi.ui.weatherlist.WeatherListFragment
@@ -48,6 +51,7 @@ class MainActivity : AppCompatActivity() {
                     Log.d("myLogs", "onLost: $network")
                 }
             })
+
     }
 
     companion object {

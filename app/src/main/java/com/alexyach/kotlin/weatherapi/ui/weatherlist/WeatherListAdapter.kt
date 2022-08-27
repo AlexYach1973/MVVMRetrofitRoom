@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.alexyach.kotlin.weatherapi.databinding.FragmentWeatherListItemBinding
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
-import kotlinx.android.synthetic.main.fragment_weather_list_item.view.*
 
 class WeatherListAdapter(
     private val dataList: List<WeatherModel>,
@@ -31,9 +30,10 @@ class WeatherListAdapter(
 
     // ViewHolder
     inner class WeatherViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private val binding = FragmentWeatherListItemBinding.bind(itemView)
 
         fun bind(weather: WeatherModel) {
-            itemView.item_city_name.text = weather.cityName
+            binding.itemCityName.text = weather.cityName
 
             // Прослуховувач для елемента
             itemView.setOnClickListener {
