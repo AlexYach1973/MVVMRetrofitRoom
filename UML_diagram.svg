@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="716.4px" preserveAspectRatio="none" style="width:875px;height:716px;background:#FFFFFF;" version="1.1" viewBox="0 0 875 716" width="875.2px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="11.0438" id="_title" style="stroke:none;stroke-width:0.4000000000000001;" width="108.8" x="380.4" y="2"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="104.8" x="382.4" y="9.8133">UML- діаграмма додатку Weather API</text><!--MD5=[15636c1ca4a123c16a2a1a8e90aca7a9]
+cluster Model--><g id="cluster_Model"><path d="M53.4,17.8438 L71.4,17.8438 A1.5,1.5 0 0 1 72.4,18.8438 L75.2,27.2875 L170.6,27.2875 A1,1 0 0 1 171.6,28.2875 L171.6,99.2438 A1,1 0 0 1 170.6,100.2438 L53.4,100.2438 A1,1 0 0 1 52.4,99.2438 L52.4,18.8438 A1,1 0 0 1 53.4,17.8438 " fill="#FFFFCC" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="52.4" x2="75.2" y1="27.2875" y2="27.2875"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="17.6" x="54" y="24.457">Model</text></g><!--MD5=[9681dc6e01e10c6b4fe06895ae94f592]
+cluster UI--><g id="cluster_UI"><path d="M232.2,32.0438 L238.2,32.0438 A1.5,1.5 0 0 1 239.2,33.0438 L242,41.4875 L618.6,41.4875 A1,1 0 0 1 619.6,42.4875 L619.6,313.2438 A1,1 0 0 1 618.6,314.2438 L232.2,314.2438 A1,1 0 0 1 231.2,313.2438 L231.2,33.0438 A1,1 0 0 1 232.2,32.0438 " fill="#00CCFF" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="231.2" x2="242" y1="41.4875" y2="41.4875"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="232.8" y="38.657">UI</text></g><!--MD5=[188e5f389a37e252b86eaabe17588145]
+cluster AppState--><g id="cluster_AppState"><path d="M663,361.8438 L688.6,361.8438 A1.5,1.5 0 0 1 689.6,362.8438 L692.4,371.2875 L843.8,371.2875 A1,1 0 0 1 844.8,372.2875 L844.8,482.8438 A1,1 0 0 1 843.8,483.8438 L663,483.8438 A1,1 0 0 1 662,482.8438 L662,362.8438 A1,1 0 0 1 663,361.8438 " fill="none" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="662" x2="692.4" y1="371.2875" y2="371.2875"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="25.2" x="663.6" y="368.457">AppState</text></g><!--MD5=[71971f99a41bb66cf321ce46bb59f738]
+cluster Repository--><g id="cluster_Repository"><path d="M3.4,323.8438 L34.2,323.8438 A1.5,1.5 0 0 1 35.2,324.8438 L38,333.2875 L651.4,333.2875 A1,1 0 0 1 652.4,334.2875 L652.4,682.2438 A1,1 0 0 1 651.4,683.2438 L3.4,683.2438 A1,1 0 0 1 2.4,682.2438 L2.4,324.8438 A1,1 0 0 1 3.4,323.8438 " fill="#66FF99" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="2.4" x2="38" y1="333.2875" y2="333.2875"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="30.4" x="4" y="330.457">Repository</text></g><!--MD5=[8a509646a725e4b29ac3346bf48b9d0c]
+cluster local--><g id="cluster_local"><path d="M381.8,344.6438 L395.4,344.6438 A1.5,1.5 0 0 1 396.4,345.6438 L399.2,354.0875 L638.6,354.0875 A1,1 0 0 1 639.6,355.0875 L639.6,496.4438 A1,1 0 0 1 638.6,497.4438 L381.8,497.4438 A1,1 0 0 1 380.8,496.4438 L380.8,345.6438 A1,1 0 0 1 381.8,344.6438 " fill="none" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="380.8" x2="399.2" y1="354.0875" y2="354.0875"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="13.2" x="382.4" y="351.257">local</text></g><!--MD5=[a75ef648444ecca2c26a9d87caa380c4]
+cluster remote.retrofit--><g id="cluster_remote.retrofit"><path d="M16.2,344.6438 L57.8,344.6438 A1.5,1.5 0 0 1 58.8,345.6438 L61.6,354.0875 L363.8,354.0875 A1,1 0 0 1 364.8,355.0875 L364.8,489.4438 A1,1 0 0 1 363.8,490.4438 L16.2,490.4438 A1,1 0 0 1 15.2,489.4438 L15.2,345.6438 A1,1 0 0 1 16.2,344.6438 " fill="none" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="15.2" x2="61.6" y1="354.0875" y2="354.0875"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="41.2" x="16.8" y="351.257">remote.retrofit</text></g><!--MD5=[f6dca2d41a3b6aa93a2f53da6142b591]
+cluster SQLite--><g id="cluster_SQLite"><path d="M662,514.2438 C662,510.2438 765.2,510.2438 765.2,510.2438 C765.2,510.2438 868.4,510.2438 868.4,514.2438 L868.4,705.8438 C868.4,709.8438 765.2,709.8438 765.2,709.8438 C765.2,709.8438 662,709.8438 662,705.8438 L662,514.2438 " fill="none" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M662,514.2438 C662,518.2438 765.2,518.2438 765.2,518.2438 C765.2,518.2438 868.4,518.2438 868.4,514.2438 " fill="none" style="stroke:#181818;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="18.4" x="756" y="524.857">SQLite</text></g><!--MD5=[33efe580f6c5d10708c24661a77d1ecb]
+cluster ROOM--><g id="cluster_ROOM"><path d="M675.8,537.0438 L694.2,537.0438 A1.5,1.5 0 0 1 695.2,538.0438 L698,546.4875 L854.6,546.4875 A1,1 0 0 1 855.6,547.4875 L855.6,696.0438 A1,1 0 0 1 854.6,697.0438 L675.8,697.0438 A1,1 0 0 1 674.8,696.0438 L674.8,538.0438 A1,1 0 0 1 675.8,537.0438 " fill="#DDDDDD" style="stroke:#000000;stroke-width:0.6000000000000001;"/><line style="stroke:#000000;stroke-width:0.6000000000000001;" x1="674.8" x2="698" y1="546.4875" y2="546.4875"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-weight="bold" lengthAdjust="spacing" textLength="18" x="676.4" y="543.657">ROOM</text></g><!--MD5=[53721144aa246f636f4dd997853a07c5]
+class WeatherModel--><g id="elem_WeatherModel"><rect codeLine="8" fill="#F1F1F1" height="61.4625" id="WeatherModel" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="106.4" x="58.8" y="32.2438"/><ellipse cx="91.9" cy="38.6438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M92.7,37.2438 Q92.7813,37.0438 92.875,36.9438 Q92.9688,36.8438 93.075,36.8438 Q93.2625,36.8438 93.3813,36.9563 Q93.5,37.0688 93.5,37.3313 L93.5,37.9563 Q93.5,38.2188 93.3875,38.3313 Q93.275,38.4438 93.1,38.4438 Q92.9438,38.4438 92.8438,38.375 Q92.7438,38.3063 92.7,38.125 Q92.6813,38 92.6125,37.9313 Q92.4875,37.8 92.2625,37.725 Q92.0375,37.6438 91.8125,37.6438 Q91.5313,37.6438 91.2938,37.7563 Q91.0625,37.8688 90.8813,38.1188 Q90.7,38.3688 90.7,38.7125 L90.7,39.0813 Q90.7,39.4938 91.0375,39.7688 Q91.375,40.0438 91.975,40.0438 Q92.3313,40.0438 92.5813,39.9625 Q92.725,39.9188 92.8875,39.775 Q92.9938,39.6938 93.05,39.6688 Q93.1063,39.6438 93.175,39.6438 Q93.3063,39.6438 93.4,39.75 Q93.5,39.85 93.5,39.9938 Q93.5,40.1313 93.3625,40.2938 Q93.1625,40.5313 92.8438,40.6625 Q92.425,40.8438 91.9125,40.8438 Q91.3125,40.8438 90.8313,40.6063 Q90.4438,40.4188 90.1688,40.0125 Q89.9,39.6063 89.9,39.125 L89.9,38.6875 Q89.9,38.1875 90.1375,37.75 Q90.3813,37.3125 90.8,37.0813 Q91.225,36.8438 91.7,36.8438 Q91.9875,36.8438 92.2375,36.9438 Q92.4875,37.0438 92.7,37.2438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="36.8" x="100.1" y="40.9352">WeatherModel</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="59.2" x2="164.8" y1="45.0438" y2="45.0438"/><ellipse cx="63.2" cy="50.7656" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="40.8" x="66.8" y="52.457">cityName: String</text><ellipse cx="63.2" cy="57.8094" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="27.2" x="66.8" y="59.5008">lat: Double</text><ellipse cx="63.2" cy="64.8531" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="28.8" x="66.8" y="66.5445">lon: Double</text><ellipse cx="63.2" cy="71.8969" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="52" x="66.8" y="73.5883">temperature: Double</text><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="4.8" x="66.8" y="80.632">...</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="59.2" x2="164.8" y1="83.4625" y2="83.4625"/><ellipse cx="63.2" cy="89.1844" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="96" x="66.8" y="90.8758">getWorldCities(): List&lt;WeatherModel&gt;</text></g><!--MD5=[5db00888549904919e3a09c35d77129e]
+class MainActivity--><g id="elem_MainActivity"><rect codeLine="20" fill="#F1F1F1" height="33.2875" id="MainActivity" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="122.8" x="355" y="46.4438"/><ellipse cx="399.9" cy="52.8438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M400.7,51.4438 Q400.7813,51.2438 400.875,51.1438 Q400.9688,51.0438 401.075,51.0438 Q401.2625,51.0438 401.3813,51.1563 Q401.5,51.2688 401.5,51.5313 L401.5,52.1563 Q401.5,52.4188 401.3875,52.5313 Q401.275,52.6438 401.1,52.6438 Q400.9438,52.6438 400.8438,52.575 Q400.7438,52.5063 400.7,52.325 Q400.6813,52.2 400.6125,52.1313 Q400.4875,52 400.2625,51.925 Q400.0375,51.8438 399.8125,51.8438 Q399.5313,51.8438 399.2938,51.9563 Q399.0625,52.0688 398.8813,52.3188 Q398.7,52.5688 398.7,52.9125 L398.7,53.2813 Q398.7,53.6938 399.0375,53.9688 Q399.375,54.2438 399.975,54.2438 Q400.3313,54.2438 400.5813,54.1625 Q400.725,54.1188 400.8875,53.975 Q400.9938,53.8938 401.05,53.8688 Q401.1063,53.8438 401.175,53.8438 Q401.3063,53.8438 401.4,53.95 Q401.5,54.05 401.5,54.1938 Q401.5,54.3313 401.3625,54.4938 Q401.1625,54.7313 400.8438,54.8625 Q400.425,55.0438 399.9125,55.0438 Q399.3125,55.0438 398.8313,54.8063 Q398.4438,54.6188 398.1688,54.2125 Q397.9,53.8063 397.9,53.325 L397.9,52.8875 Q397.9,52.3875 398.1375,51.95 Q398.3813,51.5125 398.8,51.2813 Q399.225,51.0438 399.7,51.0438 Q399.9875,51.0438 400.2375,51.1438 Q400.4875,51.2438 400.7,51.4438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="29.6" x="408.1" y="55.1352">MainActivity</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="355.4" x2="477.4" y1="59.2438" y2="59.2438"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="358.2" y="63.7656"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" text-decoration="underline" textLength="99.2" x="363" y="66.657">onNetwork: MutableLiveData&lt;Boolean&gt;</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="355.4" x2="477.4" y1="69.4875" y2="69.4875"/><ellipse cx="359.4" cy="75.2094" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" text-decoration="underline" textLength="112.4" x="363" y="76.9008">getOnNetwork(): MutableLiveData&lt;Boolean&gt;</text></g><!--MD5=[30c9fab341e8f147874052118334d6c1]
+class BaseFragment--><g id="elem_BaseFragment"><rect codeLine="24" fill="#F1F1F1" height="33.2875" id="BaseFragment" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="50" x="391.4" y="117.8438"/><ellipse cx="397.4" cy="124.2438" fill="#A9DCDF" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M398.1,124.8438 L396.7813,124.8438 L396.6063,125.2438 L396.6063,125.2438 L396.7938,125.2438 L397,125.4938 L397,125.6438 L397,125.7938 L396.7938,126.0438 L396.6063,126.0438 L395.85,126.0438 L395.6063,126.0438 L395.4,125.7938 L395.4,125.6438 L395.4,125.4938 L395.6063,125.2438 L395.85,125.2438 L396.775,122.8438 L396.425,122.8438 L396.0063,122.8438 L395.8,122.5938 L395.8,122.4438 L395.8,122.2938 L396.0063,122.0438 L396.425,122.0438 L397.8938,122.0438 L398.9688,125.2438 L399.1938,125.2438 L399.1938,125.2438 L399.4,125.4938 L399.4,125.6438 L399.4,125.7938 L399.1938,126.0438 L398.9688,126.0438 L398.2125,126.0438 L398.0063,126.0438 L397.8,125.7938 L397.8,125.6438 L397.8,125.4938 L398.0063,125.2438 L398.2125,125.2438 L398.2125,125.2438 L398.1,124.8438 Z M397.8813,124.0438 L397.4,122.6125 L396.9875,124.0438 L397.8813,124.0438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="37.2" x="403" y="126.5352">BaseFragment</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="391.8" x2="441" y1="130.6438" y2="130.6438"/><polygon fill="none" points="395.8,134.3656,397.4,135.9656,395.8,137.5656,394.2,135.9656" style="stroke:#B38D22;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="18.4" x="399.4" y="138.057">binding</text><polygon fill="none" points="395.8,141.4094,397.4,143.0094,395.8,144.6094,394.2,143.0094" style="stroke:#B38D22;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="26" x="399.4" y="145.1008">viewModel</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="391.8" x2="441" y1="147.9313" y2="147.9313"/></g><!--MD5=[9adc7670b4cf0dfdea911ce3b16ed5c3]
+class WeatherListFragment--><g id="elem_WeatherListFragment"><rect codeLine="29" fill="#F1F1F1" height="40.3313" id="WeatherListFragment" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="100.4" x="287.8" y="175.0438"/><ellipse cx="308.9" cy="181.4438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M309.7,180.0438 Q309.7813,179.8438 309.875,179.7438 Q309.9688,179.6438 310.075,179.6438 Q310.2625,179.6438 310.3813,179.7563 Q310.5,179.8688 310.5,180.1313 L310.5,180.7563 Q310.5,181.0188 310.3875,181.1313 Q310.275,181.2438 310.1,181.2438 Q309.9438,181.2438 309.8438,181.175 Q309.7438,181.1063 309.7,180.925 Q309.6813,180.8 309.6125,180.7313 Q309.4875,180.6 309.2625,180.525 Q309.0375,180.4438 308.8125,180.4438 Q308.5313,180.4438 308.2938,180.5563 Q308.0625,180.6688 307.8813,180.9188 Q307.7,181.1688 307.7,181.5125 L307.7,181.8813 Q307.7,182.2938 308.0375,182.5688 Q308.375,182.8438 308.975,182.8438 Q309.3313,182.8438 309.5813,182.7625 Q309.725,182.7188 309.8875,182.575 Q309.9938,182.4938 310.05,182.4688 Q310.1063,182.4438 310.175,182.4438 Q310.3063,182.4438 310.4,182.55 Q310.5,182.65 310.5,182.7938 Q310.5,182.9313 310.3625,183.0938 Q310.1625,183.3313 309.8438,183.4625 Q309.425,183.6438 308.9125,183.6438 Q308.3125,183.6438 307.8313,183.4063 Q307.4438,183.2188 307.1688,182.8125 Q306.9,182.4063 306.9,181.925 L306.9,181.4875 Q306.9,180.9875 307.1375,180.55 Q307.3813,180.1125 307.8,179.8813 Q308.225,179.6438 308.7,179.6438 Q308.9875,179.6438 309.2375,179.7438 Q309.4875,179.8438 309.7,180.0438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="54.8" x="317.1" y="183.7352">WeatherListFragment</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="288.2" x2="387.8" y1="187.8438" y2="187.8438"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="291" y="192.3656"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="18.4" x="295.8" y="195.257">binding</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="291" y="199.4094"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="26" x="295.8" y="202.3008">viewModel</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="288.2" x2="387.8" y1="205.1313" y2="205.1313"/><ellipse cx="292.2" cy="210.8531" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="90" x="295.8" y="212.5445">getWeatherByNameCity().observe()</text></g><!--MD5=[c8e244870e2341ab7300176f0748e9d9]
+class WeatherListViewModel--><g id="elem_WeatherListViewModel"><rect codeLine="34" fill="#F1F1F1" height="68.5063" id="WeatherListViewModel" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="163.2" x="237.6" y="239.4438"/><ellipse cx="288.9" cy="245.8438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M289.7,244.4438 Q289.7813,244.2438 289.875,244.1438 Q289.9688,244.0438 290.075,244.0438 Q290.2625,244.0438 290.3813,244.1563 Q290.5,244.2688 290.5,244.5313 L290.5,245.1563 Q290.5,245.4188 290.3875,245.5313 Q290.275,245.6438 290.1,245.6438 Q289.9438,245.6438 289.8438,245.575 Q289.7438,245.5063 289.7,245.325 Q289.6813,245.2 289.6125,245.1313 Q289.4875,245 289.2625,244.925 Q289.0375,244.8438 288.8125,244.8438 Q288.5313,244.8438 288.2938,244.9563 Q288.0625,245.0688 287.8813,245.3188 Q287.7,245.5688 287.7,245.9125 L287.7,246.2813 Q287.7,246.6938 288.0375,246.9688 Q288.375,247.2438 288.975,247.2438 Q289.3313,247.2438 289.5813,247.1625 Q289.725,247.1188 289.8875,246.975 Q289.9938,246.8938 290.05,246.8688 Q290.1063,246.8438 290.175,246.8438 Q290.3063,246.8438 290.4,246.95 Q290.5,247.05 290.5,247.1938 Q290.5,247.3313 290.3625,247.4938 Q290.1625,247.7313 289.8438,247.8625 Q289.425,248.0438 288.9125,248.0438 Q288.3125,248.0438 287.8313,247.8063 Q287.4438,247.6188 287.1688,247.2125 Q286.9,246.8063 286.9,246.325 L286.9,245.8875 Q286.9,245.3875 287.1375,244.95 Q287.3813,244.5125 287.8,244.2813 Q288.225,244.0438 288.7,244.0438 Q288.9875,244.0438 289.2375,244.1438 Q289.4875,244.2438 289.7,244.4438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="57.2" x="297.1" y="248.1352">WeatherListViewModel</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="238" x2="400.4" y1="252.2438" y2="252.2438"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="240.8" y="256.7656"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="132.4" x="245.6" y="259.657">listWeather: MutableLiveData&lt;List&lt;WeatherModel&gt;&gt;</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="240.8" y="263.8094"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="87.2" x="245.6" y="266.7008">repository: IRepositoryByCityName</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="238" x2="400.4" y1="269.5313" y2="269.5313"/><ellipse cx="242" cy="275.2531" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="152.8" x="245.6" y="276.9445">getWeatherByNameCity(): MutableLiveData&lt;WeatherModel&gt;</text><ellipse cx="242" cy="282.2969" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="152.4" x="245.6" y="283.9883">searchWeatherByNameCity(cityName: String):WeatherModel</text><ellipse cx="242" cy="289.3406" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="114" x="245.6" y="291.032">getCityListFromModel(): List&lt;WeatherModel&gt;</text><ellipse cx="242" cy="296.3844" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="113.6" x="245.6" y="298.0758">getCityListFromRoom(): List&lt;WeatherModel&gt;</text><ellipse cx="242" cy="303.4281" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="53.6" x="245.6" y="305.1195">deleteAllFromRoom()</text></g><!--MD5=[6b6ce257414ea264db5ef32f4d8183f1]
+class WeatherDetailsFragment--><g id="elem_WeatherDetailsFragment"><rect codeLine="44" fill="#F1F1F1" height="40.3313" id="WeatherDetailsFragment" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="110.4" x="440" y="175.0438"/><ellipse cx="461.9" cy="181.4438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M462.7,180.0438 Q462.7813,179.8438 462.875,179.7438 Q462.9688,179.6438 463.075,179.6438 Q463.2625,179.6438 463.3813,179.7563 Q463.5,179.8688 463.5,180.1313 L463.5,180.7563 Q463.5,181.0188 463.3875,181.1313 Q463.275,181.2438 463.1,181.2438 Q462.9438,181.2438 462.8438,181.175 Q462.7438,181.1063 462.7,180.925 Q462.6813,180.8 462.6125,180.7313 Q462.4875,180.6 462.2625,180.525 Q462.0375,180.4438 461.8125,180.4438 Q461.5313,180.4438 461.2938,180.5563 Q461.0625,180.6688 460.8813,180.9188 Q460.7,181.1688 460.7,181.5125 L460.7,181.8813 Q460.7,182.2938 461.0375,182.5688 Q461.375,182.8438 461.975,182.8438 Q462.3313,182.8438 462.5813,182.7625 Q462.725,182.7188 462.8875,182.575 Q462.9938,182.4938 463.05,182.4688 Q463.1063,182.4438 463.175,182.4438 Q463.3063,182.4438 463.4,182.55 Q463.5,182.65 463.5,182.7938 Q463.5,182.9313 463.3625,183.0938 Q463.1625,183.3313 462.8438,183.4625 Q462.425,183.6438 461.9125,183.6438 Q461.3125,183.6438 460.8313,183.4063 Q460.4438,183.2188 460.1688,182.8125 Q459.9,182.4063 459.9,181.925 L459.9,181.4875 Q459.9,180.9875 460.1375,180.55 Q460.3813,180.1125 460.8,179.8813 Q461.225,179.6438 461.7,179.6438 Q461.9875,179.6438 462.2375,179.7438 Q462.4875,179.8438 462.7,180.0438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="63.2" x="470.1" y="183.7352">WeatherDetailsFragment</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="440.4" x2="550" y1="187.8438" y2="187.8438"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="443.2" y="192.3656"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="18.4" x="448" y="195.257">binding</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="443.2" y="199.4094"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="26" x="448" y="202.3008">viewModel</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="440.4" x2="550" y1="205.1313" y2="205.1313"/><ellipse cx="444.4" cy="210.8531" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="100" x="448" y="212.5445">getWeatherDetailsAppState().observe()</text></g><!--MD5=[c77170e7b7d432deb6c247c09b52ac38]
+class WeatherDetailsViewModel--><g id="elem_WeatherDetailsViewModel"><rect codeLine="50" fill="#F1F1F1" height="61.4625" id="WeatherDetailsViewModel" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="198.4" x="414.8" y="242.8438"/><ellipse cx="479.5" cy="249.2438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M480.3,247.8438 Q480.3813,247.6438 480.475,247.5438 Q480.5688,247.4438 480.675,247.4438 Q480.8625,247.4438 480.9813,247.5563 Q481.1,247.6688 481.1,247.9313 L481.1,248.5563 Q481.1,248.8188 480.9875,248.9313 Q480.875,249.0438 480.7,249.0438 Q480.5438,249.0438 480.4438,248.975 Q480.3438,248.9063 480.3,248.725 Q480.2813,248.6 480.2125,248.5313 Q480.0875,248.4 479.8625,248.325 Q479.6375,248.2438 479.4125,248.2438 Q479.1313,248.2438 478.8938,248.3563 Q478.6625,248.4688 478.4813,248.7188 Q478.3,248.9688 478.3,249.3125 L478.3,249.6813 Q478.3,250.0938 478.6375,250.3688 Q478.975,250.6438 479.575,250.6438 Q479.9313,250.6438 480.1813,250.5625 Q480.325,250.5188 480.4875,250.375 Q480.5938,250.2938 480.65,250.2688 Q480.7063,250.2438 480.775,250.2438 Q480.9063,250.2438 481,250.35 Q481.1,250.45 481.1,250.5938 Q481.1,250.7313 480.9625,250.8938 Q480.7625,251.1313 480.4438,251.2625 Q480.025,251.4438 479.5125,251.4438 Q478.9125,251.4438 478.4313,251.2063 Q478.0438,251.0188 477.7688,250.6125 Q477.5,250.2063 477.5,249.725 L477.5,249.2875 Q477.5,248.7875 477.7375,248.35 Q477.9813,247.9125 478.4,247.6813 Q478.825,247.4438 479.3,247.4438 Q479.5875,247.4438 479.8375,247.5438 Q480.0875,247.6438 480.3,247.8438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="65.6" x="487.7" y="251.5352">WeatherDetailsViewModel</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="415.2" x2="612.8" y1="255.6438" y2="255.6438"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="418" y="260.1656"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="174.4" x="422.8" y="263.057">weatherDetailsAppState: MutableLiveData&lt;WeatherDetailsAppState&gt;</text><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="418" y="267.2094"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="87.2" x="422.8" y="270.1008">repository: IRepositoryByCityName</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="415.2" x2="612.8" y1="272.9313" y2="272.9313"/><ellipse cx="419.2" cy="278.6531" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="188" x="422.8" y="280.3445">getWeatherDetailsAppState(): MutableLiveData&lt;WeatherDetailsAppState&gt;</text><ellipse cx="419.2" cy="285.6969" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="170.8" x="422.8" y="287.3883">getWeatherByCityName(weather: WeatherModel, network: Boolean)</text><ellipse cx="419.2" cy="292.7406" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="121.6" x="422.8" y="294.432">getWeatherByLocation(weather: WeatherModel)</text><ellipse cx="419.2" cy="299.7844" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="162" x="422.8" y="301.4758">saveOrUpdateRoom(weather: WeatherModel, network: Boolean)</text></g><!--MD5=[6c8243d860940b6ae33f7f07d21143e9]
+class WeatherDetailsAppState--><g id="elem_WeatherDetailsAppState"><rect codeLine="64" fill="#F1F1F1" height="26.2438" id="WeatherDetailsAppState" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="74.8" x="672.2" y="376.2438"/><ellipse cx="678.2" cy="382.6438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M679,381.2438 Q679.0813,381.0438 679.175,380.9438 Q679.2688,380.8438 679.375,380.8438 Q679.5625,380.8438 679.6813,380.9563 Q679.8,381.0688 679.8,381.3313 L679.8,381.9563 Q679.8,382.2188 679.6875,382.3313 Q679.575,382.4438 679.4,382.4438 Q679.2438,382.4438 679.1438,382.375 Q679.0438,382.3063 679,382.125 Q678.9813,382 678.9125,381.9313 Q678.7875,381.8 678.5625,381.725 Q678.3375,381.6438 678.1125,381.6438 Q677.8313,381.6438 677.5938,381.7563 Q677.3625,381.8688 677.1813,382.1188 Q677,382.3688 677,382.7125 L677,383.0813 Q677,383.4938 677.3375,383.7688 Q677.675,384.0438 678.275,384.0438 Q678.6313,384.0438 678.8813,383.9625 Q679.025,383.9188 679.1875,383.775 Q679.2938,383.6938 679.35,383.6688 Q679.4063,383.6438 679.475,383.6438 Q679.6063,383.6438 679.7,383.75 Q679.8,383.85 679.8,383.9938 Q679.8,384.1313 679.6625,384.2938 Q679.4625,384.5313 679.1438,384.6625 Q678.725,384.8438 678.2125,384.8438 Q677.6125,384.8438 677.1313,384.6063 Q676.7438,384.4188 676.4688,384.0125 Q676.2,383.6063 676.2,383.125 L676.2,382.6875 Q676.2,382.1875 676.4375,381.75 Q676.6813,381.3125 677.1,381.0813 Q677.525,380.8438 678,380.8438 Q678.2875,380.8438 678.5375,380.9438 Q678.7875,381.0438 679,381.2438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="62" x="683.8" y="384.9352">WeatherDetailsAppState</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="672.6" x2="746.6" y1="389.0438" y2="389.0438"/><ellipse cx="676.6" cy="394.7656" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="20.4" x="680.2" y="396.457">Loading</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="672.6" x2="746.6" y1="399.2875" y2="399.2875"/></g><!--MD5=[701fb5fb9ab8bcd88de40312aeca357c]
+class SuccessGetDetailsWeather--><g id="elem_SuccessGetDetailsWeather"><rect codeLine="68" fill="#F1F1F1" height="26.2438" id="SuccessGetDetailsWeather" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="82" x="668.6" y="451.0438"/><ellipse cx="674.6" cy="457.4438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M675.4,456.0438 Q675.4813,455.8438 675.575,455.7438 Q675.6688,455.6438 675.775,455.6438 Q675.9625,455.6438 676.0813,455.7563 Q676.2,455.8688 676.2,456.1313 L676.2,456.7563 Q676.2,457.0188 676.0875,457.1313 Q675.975,457.2438 675.8,457.2438 Q675.6438,457.2438 675.5438,457.175 Q675.4438,457.1063 675.4,456.925 Q675.3813,456.8 675.3125,456.7313 Q675.1875,456.6 674.9625,456.525 Q674.7375,456.4438 674.5125,456.4438 Q674.2313,456.4438 673.9938,456.5563 Q673.7625,456.6688 673.5813,456.9188 Q673.4,457.1688 673.4,457.5125 L673.4,457.8813 Q673.4,458.2938 673.7375,458.5688 Q674.075,458.8438 674.675,458.8438 Q675.0313,458.8438 675.2813,458.7625 Q675.425,458.7188 675.5875,458.575 Q675.6938,458.4938 675.75,458.4688 Q675.8063,458.4438 675.875,458.4438 Q676.0063,458.4438 676.1,458.55 Q676.2,458.65 676.2,458.7938 Q676.2,458.9313 676.0625,459.0938 Q675.8625,459.3313 675.5438,459.4625 Q675.125,459.6438 674.6125,459.6438 Q674.0125,459.6438 673.5313,459.4063 Q673.1438,459.2188 672.8688,458.8125 Q672.6,458.4063 672.6,457.925 L672.6,457.4875 Q672.6,456.9875 672.8375,456.55 Q673.0813,456.1125 673.5,455.8813 Q673.925,455.6438 674.4,455.6438 Q674.6875,455.6438 674.9375,455.7438 Q675.1875,455.8438 675.4,456.0438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="69.2" x="680.2" y="459.7352">SuccessGetDetailsWeather</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="669" x2="750.2" y1="463.8438" y2="463.8438"/><ellipse cx="673" cy="469.5656" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="60" x="676.6" y="471.257">weather: WeatherModel</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="669" x2="750.2" y1="474.0875" y2="474.0875"/></g><!--MD5=[5f380c10fa58830e166366590753ce8b]
+class ErrorGetDetailsWeather--><g id="elem_ErrorGetDetailsWeather"><rect codeLine="71" fill="#F1F1F1" height="26.2438" id="ErrorGetDetailsWeather" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="73.6" x="764.8" y="451.0438"/><ellipse cx="770.8" cy="457.4438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M771.6,456.0438 Q771.6813,455.8438 771.775,455.7438 Q771.8688,455.6438 771.975,455.6438 Q772.1625,455.6438 772.2813,455.7563 Q772.4,455.8688 772.4,456.1313 L772.4,456.7563 Q772.4,457.0188 772.2875,457.1313 Q772.175,457.2438 772,457.2438 Q771.8438,457.2438 771.7438,457.175 Q771.6438,457.1063 771.6,456.925 Q771.5813,456.8 771.5125,456.7313 Q771.3875,456.6 771.1625,456.525 Q770.9375,456.4438 770.7125,456.4438 Q770.4313,456.4438 770.1938,456.5563 Q769.9625,456.6688 769.7813,456.9188 Q769.6,457.1688 769.6,457.5125 L769.6,457.8813 Q769.6,458.2938 769.9375,458.5688 Q770.275,458.8438 770.875,458.8438 Q771.2313,458.8438 771.4813,458.7625 Q771.625,458.7188 771.7875,458.575 Q771.8938,458.4938 771.95,458.4688 Q772.0063,458.4438 772.075,458.4438 Q772.2063,458.4438 772.3,458.55 Q772.4,458.65 772.4,458.7938 Q772.4,458.9313 772.2625,459.0938 Q772.0625,459.3313 771.7438,459.4625 Q771.325,459.6438 770.8125,459.6438 Q770.2125,459.6438 769.7313,459.4063 Q769.3438,459.2188 769.0688,458.8125 Q768.8,458.4063 768.8,457.925 L768.8,457.4875 Q768.8,456.9875 769.0375,456.55 Q769.2813,456.1125 769.7,455.8813 Q770.125,455.6438 770.6,455.6438 Q770.8875,455.6438 771.1375,455.7438 Q771.3875,455.8438 771.6,456.0438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="60.8" x="776.4" y="459.7352">ErrorGetDetailsWeather</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="765.2" x2="838" y1="463.8438" y2="463.8438"/><ellipse cx="769.2" cy="469.5656" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="45.2" x="772.8" y="471.257">errorString: String</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="765.2" x2="838" y1="474.0875" y2="474.0875"/></g><!--MD5=[5a2165f55fd0d4ec39d394837bc8438a]
+class IRepositoryByCityName--><g id="elem_IRepositoryByCityName"><rect codeLine="78" fill="#F1F1F1" height="26.2438" id="IRepositoryByCityName" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="230" x="269" y="568.6438"/><ellipse cx="352.5" cy="575.0438" fill="#B4A7E5" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M352.9,573.8438 L352.9,576.2438 L353.7,576.2438 L353.8938,576.2438 L354.1,576.4938 L354.1,576.6438 L354.1,576.7938 L353.8938,577.0438 L353.7,577.0438 L351.3,577.0438 L351.1063,577.0438 L350.9,576.7938 L350.9,576.6438 L350.9,576.4938 L351.1063,576.2438 L351.3,576.2438 L352.1,576.2438 L352.1,573.8438 L351.3,573.8438 L351.1063,573.8438 L350.9,573.5938 L350.9,573.4438 L350.9,573.2938 L351.1063,573.0438 L351.3,573.0438 L353.7,573.0438 L353.8938,573.0438 L354.1,573.2938 L354.1,573.4438 L354.1,573.5938 L353.8938,573.8438 L353.7,573.8438 L352.9,573.8438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="59.6" x="360.7" y="577.3352">IRepositoryByCityName</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="269.4" x2="498.6" y1="581.4438" y2="581.4438"/><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="269.4" x2="498.6" y1="584.6438" y2="584.6438"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="225.2" x="271.4" y="592.057">getWeatherDetailsByCityName(cityName: String, callbackResponse: ICallbackResponse)</text></g><!--MD5=[403ee4a76e616008f55a1173b5ea3f96]
+class IRepositoryByLocation--><g id="elem_IRepositoryByLocation"><rect codeLine="81" fill="#F1F1F1" height="26.2438" id="IRepositoryByLocation" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="245.2" x="9.8" y="568.6438"/><ellipse cx="102.3" cy="575.0438" fill="#B4A7E5" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M102.7,573.8438 L102.7,576.2438 L103.5,576.2438 L103.6938,576.2438 L103.9,576.4938 L103.9,576.6438 L103.9,576.7938 L103.6938,577.0438 L103.5,577.0438 L101.1,577.0438 L100.9063,577.0438 L100.7,576.7938 L100.7,576.6438 L100.7,576.4938 L100.9063,576.2438 L101.1,576.2438 L101.9,576.2438 L101.9,573.8438 L101.1,573.8438 L100.9063,573.8438 L100.7,573.5938 L100.7,573.4438 L100.7,573.2938 L100.9063,573.0438 L101.1,573.0438 L103.5,573.0438 L103.6938,573.0438 L103.9,573.2938 L103.9,573.4438 L103.9,573.5938 L103.6938,573.8438 L103.5,573.8438 L102.7,573.8438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="56.8" x="110.5" y="577.3352">IRepositoryByLocation</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="10.2" x2="254.6" y1="581.4438" y2="581.4438"/><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="10.2" x2="254.6" y1="584.6438" y2="584.6438"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="240.4" x="12.2" y="592.057">getWeatherDetailsByLocation(lat: Double, lon: Double, callbackResponse: ICallbackResponse)</text></g><!--MD5=[6717e09028479e6b2f82f059bf849cc9]
+class ICallbackResponse--><g id="elem_ICallbackResponse"><rect codeLine="84" fill="#F1F1F1" height="33.2875" id="ICallbackResponse" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="146.4" x="184.8" y="643.6438"/><ellipse cx="231.7" cy="650.0438" fill="#B4A7E5" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M232.1,648.8438 L232.1,651.2438 L232.9,651.2438 L233.0938,651.2438 L233.3,651.4938 L233.3,651.6438 L233.3,651.7938 L233.0938,652.0438 L232.9,652.0438 L230.5,652.0438 L230.3063,652.0438 L230.1,651.7938 L230.1,651.6438 L230.1,651.4938 L230.3063,651.2438 L230.5,651.2438 L231.3,651.2438 L231.3,648.8438 L230.5,648.8438 L230.3063,648.8438 L230.1,648.5938 L230.1,648.4438 L230.1,648.2938 L230.3063,648.0438 L230.5,648.0438 L232.9,648.0438 L233.0938,648.0438 L233.3,648.2938 L233.3,648.4438 L233.3,648.5938 L233.0938,648.8438 L232.9,648.8438 L232.1,648.8438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="49.2" x="239.9" y="652.3352">ICallbackResponse</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="185.2" x2="330.8" y1="656.4438" y2="656.4438"/><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="185.2" x2="330.8" y1="659.6438" y2="659.6438"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="141.6" x="187.2" y="667.057">onCallbackResponse(callbackWeather: WeatherModel)</text><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="80.8" x="187.2" y="674.1008">onCallbackFailure(e: Exception)</text></g><!--MD5=[7b807724cba2c90c23217ad2343d5b21]
+class IWeatherRoom--><g id="elem_IWeatherRoom"><rect codeLine="91" fill="#F1F1F1" height="47.375" id="IWeatherRoom" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="151.2" x="458.4" y="440.6438"/><ellipse cx="513.1" cy="447.0438" fill="#B4A7E5" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M513.5,445.8438 L513.5,448.2438 L514.3,448.2438 L514.4938,448.2438 L514.7,448.4938 L514.7,448.6438 L514.7,448.7938 L514.4938,449.0438 L514.3,449.0438 L511.9,449.0438 L511.7063,449.0438 L511.5,448.7938 L511.5,448.6438 L511.5,448.4938 L511.7063,448.2438 L511.9,448.2438 L512.7,448.2438 L512.7,445.8438 L511.9,445.8438 L511.7063,445.8438 L511.5,445.5938 L511.5,445.4438 L511.5,445.2938 L511.7063,445.0438 L511.9,445.0438 L514.3,445.0438 L514.4938,445.0438 L514.7,445.2938 L514.7,445.4438 L514.7,445.5938 L514.4938,445.8438 L514.3,445.8438 L513.5,445.8438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="38.4" x="521.3" y="449.3352">IWeatherRoom</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="458.8" x2="609.2" y1="453.4438" y2="453.4438"/><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="458.8" x2="609.2" y1="456.6438" y2="456.6438"/><ellipse cx="462.8" cy="462.3656" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="140.8" x="466.4" y="464.057">getWeatherAll(callback : (List&lt;WeatherModel&gt;) -&gt; Unit)</text><ellipse cx="462.8" cy="469.4094" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="120" x="466.4" y="471.1008">saveWeatherToRoom(weather: WeatherModel)</text><ellipse cx="462.8" cy="476.4531" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="104.4" x="466.4" y="478.1445">updateWeather(weather: WeatherModel)</text><ellipse cx="462.8" cy="483.4969" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="25.6" x="466.4" y="485.1883">deleteAll()</text></g><!--MD5=[d01d105f7598cd330661dc0d4ef33871]
+class RepositoryRoomImpl--><g id="elem_RepositoryRoomImpl"><rect codeLine="97" fill="#F1F1F1" height="54.4188" id="RepositoryRoomImpl" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="231.6" x="398.2" y="362.2438"/><ellipse cx="486.3" cy="368.6438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M487.1,367.2438 Q487.1813,367.0438 487.275,366.9438 Q487.3688,366.8438 487.475,366.8438 Q487.6625,366.8438 487.7813,366.9563 Q487.9,367.0688 487.9,367.3313 L487.9,367.9563 Q487.9,368.2188 487.7875,368.3313 Q487.675,368.4438 487.5,368.4438 Q487.3438,368.4438 487.2438,368.375 Q487.1438,368.3063 487.1,368.125 Q487.0813,368 487.0125,367.9313 Q486.8875,367.8 486.6625,367.725 Q486.4375,367.6438 486.2125,367.6438 Q485.9313,367.6438 485.6938,367.7563 Q485.4625,367.8688 485.2813,368.1188 Q485.1,368.3688 485.1,368.7125 L485.1,369.0813 Q485.1,369.4938 485.4375,369.7688 Q485.775,370.0438 486.375,370.0438 Q486.7313,370.0438 486.9813,369.9625 Q487.125,369.9188 487.2875,369.775 Q487.3938,369.6938 487.45,369.6688 Q487.5063,369.6438 487.575,369.6438 Q487.7063,369.6438 487.8,369.75 Q487.9,369.85 487.9,369.9938 Q487.9,370.1313 487.7625,370.2938 Q487.5625,370.5313 487.2438,370.6625 Q486.825,370.8438 486.3125,370.8438 Q485.7125,370.8438 485.2313,370.6063 Q484.8438,370.4188 484.5688,370.0125 Q484.3,369.6063 484.3,369.125 L484.3,368.6875 Q484.3,368.1875 484.5375,367.75 Q484.7813,367.3125 485.2,367.0813 Q485.625,366.8438 486.1,366.8438 Q486.3875,366.8438 486.6375,366.9438 Q486.8875,367.0438 487.1,367.2438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="52" x="494.5" y="370.9352">RepositoryRoomImpl</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="398.6" x2="629.4" y1="375.0438" y2="375.0438"/><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="398.6" x2="629.4" y1="378.2438" y2="378.2438"/><ellipse cx="402.6" cy="383.9656" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="221.2" x="406.2" y="385.657">getWeatherDetailsByCityName(cityName: String,callbackResponse: ICallbackResponse)</text><ellipse cx="402.6" cy="391.0094" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="137.2" x="406.2" y="392.7008">getWeatherAll(callback: (List&lt;WeatherModel&gt;) -&gt; Unit)</text><ellipse cx="402.6" cy="398.0531" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="119.2" x="406.2" y="399.7445">saveWeatherToRoom(weather: WeatherModel)</text><ellipse cx="402.6" cy="405.0969" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="103.2" x="406.2" y="406.7883">updateWeather(weather: WeatherModel)</text><ellipse cx="402.6" cy="412.1406" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="25.6" x="406.2" y="413.832">deleteAll()</text></g><!--MD5=[afc411b34e8dc313ca0eb4c0f8e28a4c]
+class WeatherDTO--><g id="elem_WeatherDTO"><rect codeLine="107" fill="#F1F1F1" height="54.4188" id="WeatherDTO" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="62.4" x="292.8" y="362.2438"/><ellipse cx="306" cy="368.6438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M306.8,367.2438 Q306.8813,367.0438 306.975,366.9438 Q307.0688,366.8438 307.175,366.8438 Q307.3625,366.8438 307.4813,366.9563 Q307.6,367.0688 307.6,367.3313 L307.6,367.9563 Q307.6,368.2188 307.4875,368.3313 Q307.375,368.4438 307.2,368.4438 Q307.0438,368.4438 306.9438,368.375 Q306.8438,368.3063 306.8,368.125 Q306.7813,368 306.7125,367.9313 Q306.5875,367.8 306.3625,367.725 Q306.1375,367.6438 305.9125,367.6438 Q305.6313,367.6438 305.3938,367.7563 Q305.1625,367.8688 304.9813,368.1188 Q304.8,368.3688 304.8,368.7125 L304.8,369.0813 Q304.8,369.4938 305.1375,369.7688 Q305.475,370.0438 306.075,370.0438 Q306.4313,370.0438 306.6813,369.9625 Q306.825,369.9188 306.9875,369.775 Q307.0938,369.6938 307.15,369.6688 Q307.2063,369.6438 307.275,369.6438 Q307.4063,369.6438 307.5,369.75 Q307.6,369.85 307.6,369.9938 Q307.6,370.1313 307.4625,370.2938 Q307.2625,370.5313 306.9438,370.6625 Q306.525,370.8438 306.0125,370.8438 Q305.4125,370.8438 304.9313,370.6063 Q304.5438,370.4188 304.2688,370.0125 Q304,369.6063 304,369.125 L304,368.6875 Q304,368.1875 304.2375,367.75 Q304.4813,367.3125 304.9,367.0813 Q305.325,366.8438 305.8,366.8438 Q306.0875,366.8438 306.3375,366.9438 Q306.5875,367.0438 306.8,367.2438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="33.6" x="313.2" y="370.9352">WeatherDTO</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="293.2" x2="354.8" y1="375.0438" y2="375.0438"/><ellipse cx="297.2" cy="380.7656" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="40.8" x="300.8" y="382.457">cityName: String</text><ellipse cx="297.2" cy="387.8094" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="27.2" x="300.8" y="389.5008">lat: Double</text><ellipse cx="297.2" cy="394.8531" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="28.8" x="300.8" y="396.5445">lon: Double</text><ellipse cx="297.2" cy="401.8969" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="52" x="300.8" y="403.5883">temperature: Double</text><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="4.8" x="300.8" y="410.632">...</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="293.2" x2="354.8" y1="413.4625" y2="413.4625"/></g><!--MD5=[0f4b2fcf4add1da42f3e99fe720f3fde]
+class IWeatherApiRetrofit--><g id="elem_IWeatherApiRetrofit"><rect codeLine="115" fill="#F1F1F1" height="33.2875" id="IWeatherApiRetrofit" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="128.4" x="170.2" y="447.6438"/><ellipse cx="207.7" cy="454.0438" fill="#B4A7E5" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M208.1,452.8438 L208.1,455.2438 L208.9,455.2438 L209.0938,455.2438 L209.3,455.4938 L209.3,455.6438 L209.3,455.7938 L209.0938,456.0438 L208.9,456.0438 L206.5,456.0438 L206.3063,456.0438 L206.1,455.7938 L206.1,455.6438 L206.1,455.4938 L206.3063,455.2438 L206.5,455.2438 L207.3,455.2438 L207.3,452.8438 L206.5,452.8438 L206.3063,452.8438 L206.1,452.5938 L206.1,452.4438 L206.1,452.2938 L206.3063,452.0438 L206.5,452.0438 L208.9,452.0438 L209.0938,452.0438 L209.3,452.2938 L209.3,452.4438 L209.3,452.5938 L209.0938,452.8438 L208.9,452.8438 L208.1,452.8438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="50" x="215.9" y="456.3352">IWeatherApiRetrofit</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="170.6" x2="298.2" y1="460.4438" y2="460.4438"/><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="170.6" x2="298.2" y1="463.6438" y2="463.6438"/><ellipse cx="174.6" cy="469.3656" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="118" x="178.2" y="471.057">getWeatherByCityName(): Call&lt;WeatherDTO&gt;</text><ellipse cx="174.6" cy="476.4094" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="115.2" x="178.2" y="478.1008">getWeatherByLocation(): Call&lt;WeatherDTO&gt;</text></g><!--MD5=[b7b5efefd9b537fdc2c0ea3c6e6d5fff]
+class RepositoryRetrofitImpl--><g id="elem_RepositoryRetrofitImpl"><rect codeLine="119" fill="#F1F1F1" height="40.3313" id="RepositoryRetrofitImpl" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="246" x="32.6" y="369.2438"/><ellipse cx="126.1" cy="375.6438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M126.9,374.2438 Q126.9813,374.0438 127.075,373.9438 Q127.1688,373.8438 127.275,373.8438 Q127.4625,373.8438 127.5813,373.9563 Q127.7,374.0688 127.7,374.3313 L127.7,374.9563 Q127.7,375.2188 127.5875,375.3313 Q127.475,375.4438 127.3,375.4438 Q127.1438,375.4438 127.0438,375.375 Q126.9438,375.3063 126.9,375.125 Q126.8813,375 126.8125,374.9313 Q126.6875,374.8 126.4625,374.725 Q126.2375,374.6438 126.0125,374.6438 Q125.7313,374.6438 125.4938,374.7563 Q125.2625,374.8688 125.0813,375.1188 Q124.9,375.3688 124.9,375.7125 L124.9,376.0813 Q124.9,376.4938 125.2375,376.7688 Q125.575,377.0438 126.175,377.0438 Q126.5313,377.0438 126.7813,376.9625 Q126.925,376.9188 127.0875,376.775 Q127.1938,376.6938 127.25,376.6688 Q127.3063,376.6438 127.375,376.6438 Q127.5063,376.6438 127.6,376.75 Q127.7,376.85 127.7,376.9938 Q127.7,377.1313 127.5625,377.2938 Q127.3625,377.5313 127.0438,377.6625 Q126.625,377.8438 126.1125,377.8438 Q125.5125,377.8438 125.0313,377.6063 Q124.6438,377.4188 124.3688,377.0125 Q124.1,376.6063 124.1,376.125 L124.1,375.6875 Q124.1,375.1875 124.3375,374.75 Q124.5813,374.3125 125,374.0813 Q125.425,373.8438 125.9,373.8438 Q126.1875,373.8438 126.4375,373.9438 Q126.6875,374.0438 126.9,374.2438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="55.6" x="134.3" y="377.9352">RepositoryRetrofitImpl</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="33" x2="278.2" y1="382.0438" y2="382.0438"/><rect fill="none" height="2.4" style="stroke:#C82930;stroke-width:0.4000000000000001;" width="2.4" x="35.8" y="386.5656"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="60" x="40.6" y="389.457">api: IWeatherApiRetrofit</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="33" x2="278.2" y1="392.2875" y2="392.2875"/><ellipse cx="37" cy="398.0094" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="221.2" x="40.6" y="399.7008">getWeatherDetailsByCityName(cityName: String,callbackResponse: ICallbackResponse)</text><ellipse cx="37" cy="405.0531" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="235.6" x="40.6" y="406.7445">getWeatherDetailsByLocation(lat: Double,lon: Double,callbackResponse: ICallbackResponse)</text></g><!--MD5=[e5741806a12d0f081e0f05a7796fe698]
+class WeatherDataBase--><g id="elem_WeatherDataBase"><rect codeLine="131" fill="#F1F1F1" height="26.2438" id="WeatherDataBase" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="77.2" x="768.6" y="568.6438"/><ellipse cx="782.52" cy="575.0438" fill="#A9DCDF" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M783.22,575.6438 L781.9013,575.6438 L781.7263,576.0438 L781.7263,576.0438 L781.9138,576.0438 L782.12,576.2938 L782.12,576.4438 L782.12,576.5938 L781.9138,576.8438 L781.7263,576.8438 L780.97,576.8438 L780.7263,576.8438 L780.52,576.5938 L780.52,576.4438 L780.52,576.2938 L780.7263,576.0438 L780.97,576.0438 L781.895,573.6438 L781.545,573.6438 L781.1263,573.6438 L780.92,573.3938 L780.92,573.2438 L780.92,573.0938 L781.1263,572.8438 L781.545,572.8438 L783.0138,572.8438 L784.0888,576.0438 L784.3138,576.0438 L784.3138,576.0438 L784.52,576.2938 L784.52,576.4438 L784.52,576.5938 L784.3138,576.8438 L784.0888,576.8438 L783.3325,576.8438 L783.1263,576.8438 L782.92,576.5938 L782.92,576.4438 L782.92,576.2938 L783.1263,576.0438 L783.3325,576.0438 L783.3325,576.0438 L783.22,575.6438 Z M783.0013,574.8438 L782.52,573.4125 L782.1075,574.8438 L783.0013,574.8438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="46.8" x="789.88" y="577.3352">WeatherDataBase</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="769" x2="845.4" y1="581.4438" y2="581.4438"/><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="769" x2="845.4" y1="584.6438" y2="584.6438"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="72.4" x="771" y="592.057">weatherDao(): IWeatherDAO</text></g><!--MD5=[25146ae86f9f8585b2545e5fa9ba9841]
+class WeatherEntity--><g id="elem_WeatherEntity"><rect codeLine="134" fill="#F1F1F1" height="54.4188" id="WeatherEntity" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="62.4" x="692" y="554.6438"/><ellipse cx="704.3" cy="561.0438" fill="#ADD1B2" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M705.1,559.6438 Q705.1813,559.4438 705.275,559.3438 Q705.3688,559.2438 705.475,559.2438 Q705.6625,559.2438 705.7813,559.3563 Q705.9,559.4688 705.9,559.7313 L705.9,560.3563 Q705.9,560.6188 705.7875,560.7313 Q705.675,560.8438 705.5,560.8438 Q705.3438,560.8438 705.2438,560.775 Q705.1438,560.7063 705.1,560.525 Q705.0813,560.4 705.0125,560.3313 Q704.8875,560.2 704.6625,560.125 Q704.4375,560.0438 704.2125,560.0438 Q703.9313,560.0438 703.6938,560.1563 Q703.4625,560.2688 703.2813,560.5188 Q703.1,560.7688 703.1,561.1125 L703.1,561.4813 Q703.1,561.8938 703.4375,562.1688 Q703.775,562.4438 704.375,562.4438 Q704.7313,562.4438 704.9813,562.3625 Q705.125,562.3188 705.2875,562.175 Q705.3938,562.0938 705.45,562.0688 Q705.5063,562.0438 705.575,562.0438 Q705.7063,562.0438 705.8,562.15 Q705.9,562.25 705.9,562.3938 Q705.9,562.5313 705.7625,562.6938 Q705.5625,562.9313 705.2438,563.0625 Q704.825,563.2438 704.3125,563.2438 Q703.7125,563.2438 703.2313,563.0063 Q702.8438,562.8188 702.5688,562.4125 Q702.3,562.0063 702.3,561.525 L702.3,561.0875 Q702.3,560.5875 702.5375,560.15 Q702.7813,559.7125 703.2,559.4813 Q703.625,559.2438 704.1,559.2438 Q704.3875,559.2438 704.6375,559.3438 Q704.8875,559.4438 705.1,559.6438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="35.6" x="711.3" y="563.3352">WeatherEntity</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="692.4" x2="754" y1="567.4438" y2="567.4438"/><ellipse cx="696.4" cy="573.1656" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="40.8" x="700" y="574.857">cityName: String</text><ellipse cx="696.4" cy="580.2094" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="27.2" x="700" y="581.9008">lat: Double</text><ellipse cx="696.4" cy="587.2531" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="28.8" x="700" y="588.9445">lon: Double</text><ellipse cx="696.4" cy="594.2969" fill="none" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="52" x="700" y="595.9883">temperature: Double</text><text fill="#000000" font-family="sans-serif" font-size="5.6" lengthAdjust="spacing" textLength="4.8" x="700" y="603.032">...</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="692.4" x2="754" y1="605.8625" y2="605.8625"/></g><!--MD5=[3e69ac2e63022ab87a54dc6eba1b9dbd]
+class IWeatherDAO--><g id="elem_IWeatherDAO"><rect codeLine="141" fill="#F1F1F1" height="54.4188" id="IWeatherDAO" rx="1" ry="1" style="stroke:#181818;stroke-width:0.20000000000000004;" width="136.8" x="709.2" y="633.0438"/><ellipse cx="758.1" cy="639.4438" fill="#B4A7E5" rx="4.4" ry="4.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M758.5,638.2438 L758.5,640.6438 L759.3,640.6438 L759.4938,640.6438 L759.7,640.8938 L759.7,641.0438 L759.7,641.1938 L759.4938,641.4438 L759.3,641.4438 L756.9,641.4438 L756.7063,641.4438 L756.5,641.1938 L756.5,641.0438 L756.5,640.8938 L756.7063,640.6438 L756.9,640.6438 L757.7,640.6438 L757.7,638.2438 L756.9,638.2438 L756.7063,638.2438 L756.5,637.9938 L756.5,637.8438 L756.5,637.6938 L756.7063,637.4438 L756.9,637.4438 L759.3,637.4438 L759.4938,637.4438 L759.7,637.6938 L759.7,637.8438 L759.7,637.9938 L759.4938,638.2438 L759.3,638.2438 L758.5,638.2438 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="35.6" x="766.3" y="641.7352">IWeatherDAO</text><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="709.6" x2="845.6" y1="645.8438" y2="645.8438"/><line style="stroke:#181818;stroke-width:0.20000000000000004;" x1="709.6" x2="845.6" y1="649.0438" y2="649.0438"/><ellipse cx="713.6" cy="654.7656" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="113.2" x="717.2" y="656.457">insertWeather(weatherEntity: WeatherEntity)</text><ellipse cx="713.6" cy="661.8094" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="94.4" x="717.2" y="663.5008">getWeatherAll(): List&lt;WeatherEntity&gt;</text><ellipse cx="713.6" cy="668.8531" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="126.4" x="717.2" y="670.5445">getWeatherByName(name: String): WeatherEntity</text><ellipse cx="713.6" cy="675.8969" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="116.8" x="717.2" y="677.5883">updateWeather(weatherEntity: WeatherEntity)</text><ellipse cx="713.6" cy="682.9406" fill="#84BE84" rx="1.2" ry="1.2" style="stroke:#038048;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="5.6" font-style="italic" lengthAdjust="spacing" textLength="25.6" x="717.2" y="684.632">deleteAll()</text></g><!--MD5=[5a0f7491811913efbf12f6267aaa6d5b]
+reverse link MainActivity to BaseFragment--><g id="link_MainActivity_BaseFragment"><path codeLine="152" d="M416.4,85.1198 C416.4,95.6398 416.4,108.0638 416.4,117.7598 " fill="none" id="MainActivity-backto-BaseFragment" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="#181818" points="416.4,79.8198,414.8,82.2198,416.4,84.6198,418,82.2198,416.4,79.8198" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[894a3aa679ab4c1983c0ce4dc40b3e1b]
+reverse link BaseFragment to WeatherListFragment--><g id="link_BaseFragment_WeatherListFragment"><path codeLine="153" d="M388.764,155.9958 C380.708,162.1598 371.94,168.8718 363.988,174.9558 " fill="none" id="BaseFragment-backto-WeatherListFragment" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="none" points="387.128,153.7198,395.184,151.0798,390.532,158.1678,387.128,153.7198" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[ff8bfa2d1fcf704ed1451c3de15ad4d9]
+reverse link BaseFragment to WeatherDetailsFragment--><g id="link_BaseFragment_WeatherDetailsFragment"><path codeLine="154" d="M444.176,155.9958 C452.272,162.1598 461.088,168.8718 469.08,174.9558 " fill="none" id="BaseFragment-backto-WeatherDetailsFragment" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="none" points="442.392,158.1558,437.724,151.0798,445.784,153.6998,442.392,158.1558" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[52d49948d5f5b87742eeb801c3f9d39e]
+reverse link WeatherListFragment to WeatherListViewModel--><g id="link_WeatherListFragment_WeatherListViewModel"><path codeLine="155" d="M331.944,220.6358 C330.496,226.6158 328.928,233.0998 327.4,239.4038 " fill="none" id="WeatherListFragment-backto-WeatherListViewModel" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="#181818" points="333.184,215.5278,331.0647,217.4845,332.0558,220.1933,334.1751,218.2366,333.184,215.5278" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[025a653e1c6f4ac0b947d51b57e18872]
+reverse link WeatherDetailsFragment to WeatherDetailsViewModel--><g id="link_WeatherDetailsFragment_WeatherDetailsViewModel"><path codeLine="156" d="M501.252,220.6278 C502.956,227.6598 504.828,235.3878 506.6,242.7038 " fill="none" id="WeatherDetailsFragment-backto-WeatherDetailsViewModel" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="#181818" points="500.016,215.5278,499.0249,218.2366,501.1442,220.1933,502.1353,217.4845,500.016,215.5278" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[08c9a46248ba12d4e0361742a9815ea7]
+reverse link WeatherDetailsViewModel to RepositoryRetrofitImpl--><g id="link_WeatherDetailsViewModel_RepositoryRetrofitImpl"><path codeLine="158" d="M445.292,306.3478 C433.104,310.8638 420.356,314.8438 408,317.4438 C381.46,323.0278 312.244,313.8118 286,320.6438 C248.396,330.4318 209.476,352.7118 184.06,369.1958 " fill="none" id="WeatherDetailsViewModel-backto-RepositoryRetrofitImpl" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="none" points="450.292,304.4518,447.4811,303.8046,445.8026,306.1504,448.6135,306.7975,450.292,304.4518" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[2b41e2231882828aa0739e13db0890d9]
+reverse link WeatherDetailsViewModel to RepositoryRoomImpl--><g id="link_WeatherDetailsViewModel_RepositoryRoomImpl"><path codeLine="159" d="M514,309.8158 C514,326.7038 514,346.5198 514,362.1118 " fill="none" id="WeatherDetailsViewModel-backto-RepositoryRoomImpl" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="none" points="514,304.5598,512.4,306.9598,514,309.3598,515.6,306.9598,514,304.5598" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[a67f32fe0d163811fac1790bec0a3369]
+reverse link WeatherDetailsAppState to SuccessGetDetailsWeather--><g id="link_WeatherDetailsAppState_SuccessGetDetailsWeather"><path codeLine="162" d="M709.6,410.8678 C709.6,423.7918 709.6,439.9318 709.6,450.9758 " fill="none" id="WeatherDetailsAppState-backto-SuccessGetDetailsWeather" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="none" points="706.8,410.7318,709.6,402.7318,712.4,410.7318,706.8,410.7318" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[4c47278934bdc9305f427488cc2f52dd]
+reverse link WeatherDetailsAppState to ErrorGetDetailsWeather--><g id="link_WeatherDetailsAppState_ErrorGetDetailsWeather"><path codeLine="163" d="M731.796,407.6958 C748.388,421.0438 770.684,438.9758 785.568,450.9478 " fill="none" id="WeatherDetailsAppState-backto-ErrorGetDetailsWeather" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="none" points="730,409.8438,725.52,402.6478,733.508,405.4798,730,409.8438" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[9309d82b54e30efe7a8e3ffb2f97d35e]
+reverse link WeatherDetailsViewModel to WeatherDetailsAppState--><g id="link_WeatherDetailsViewModel_WeatherDetailsAppState"><path codeLine="164" d="M610.636,306.7118 C619.576,310.9478 628.304,315.5958 636.4,320.6438 C661.416,336.2438 685.396,361.1718 698.744,376.2358 " fill="none" id="WeatherDetailsViewModel-backto-WeatherDetailsAppState" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="none" points="605.8,304.4638,607.3031,306.9256,610.1537,306.4849,608.6506,304.0231,605.8,304.4638" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[d8352226f5113f78356d348887002915]
+reverse link WeatherListViewModel to RepositoryRoomImpl--><g id="link_WeatherListViewModel_RepositoryRoomImpl"><path codeLine="166" d="M380.976,310.5118 C409.372,327.2798 442.456,346.8078 468.524,362.1998 " fill="none" id="WeatherListViewModel-backto-RepositoryRoomImpl" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="none" points="376.46,307.8478,377.7154,310.4447,380.5954,310.2847,379.34,307.6878,376.46,307.8478" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[a805fff9b6f641534a846fa1011bc68d]
+reverse link WeatherListViewModel to RepositoryRetrofitImpl--><g id="link_WeatherListViewModel_RepositoryRetrofitImpl"><path codeLine="167" d="M266.74,310.9198 C239.216,330.2678 206.584,353.2078 183.828,369.2038 " fill="none" id="WeatherListViewModel-backto-RepositoryRetrofitImpl" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="none" points="271.108,307.8478,268.2245,307.9198,267.1819,310.6092,270.0654,310.5372,271.108,307.8478" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[68b50ba5da49dac51d88bdc5483d1ed2]
+reverse link IRepositoryByCityName to ICallbackResponse--><g id="link_IRepositoryByCityName_ICallbackResponse"><path codeLine="172" d="M356.256,599.3278 C334.828,612.5278 305.372,630.6678 284.312,643.6398 " fill="none" id="IRepositoryByCityName-backto-ICallbackResponse" style="stroke:#181818;stroke-width:0.4000000000000001;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="354.912,596.8678,363.192,595.0598,357.852,601.6358,354.912,596.8678" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[c3e28c06beb2d890dda271e3bc3ad0c9]
+reverse link IRepositoryByLocation to ICallbackResponse--><g id="link_IRepositoryByLocation_ICallbackResponse"><path codeLine="173" d="M160.056,599.3278 C181.416,612.5278 210.78,630.6678 231.772,643.6398 " fill="none" id="IRepositoryByLocation-backto-ICallbackResponse" style="stroke:#181818;stroke-width:0.4000000000000001;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="158.476,601.6438,153.14,595.0598,161.416,596.8798,158.476,601.6438" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[07b0ad57bcad319263a8d163376d7c83]
+reverse link RepositoryRoomImpl to IWeatherRoom--><g id="link_RepositoryRoomImpl_IWeatherRoom"><path codeLine="176" d="M523.372,424.5158 C524.84,429.9478 526.324,435.4438 527.7,440.5398 " fill="none" id="RepositoryRoomImpl-backto-IWeatherRoom" style="stroke:#181818;stroke-width:0.4000000000000001;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="520.632,425.1158,521.248,416.6638,526.04,423.6558,520.632,425.1158" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[e8ef014f2c475eb2665a98dcc825e7cb]
+reverse link RepositoryRoomImpl to IRepositoryByCityName--><g id="link_RepositoryRoomImpl_IRepositoryByCityName"><path codeLine="177" d="M468.024,422.1678 C461.948,427.8278 456.228,434.0358 451.6,440.6438 C434.532,464.9998 442.084,476.8478 429.6,503.8438 C418.616,527.5998 402.484,553.4918 392.644,568.5518 " fill="none" id="RepositoryRoomImpl-backto-IRepositoryByCityName" style="stroke:#181818;stroke-width:0.4000000000000001;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="466.348,419.9118,474.192,416.6998,470.064,424.1038,466.348,419.9118" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[7ec08d4064681d3175937c1b22b107e8]
+reverse link IWeatherRoom to ROOM--><g id="link_IWeatherRoom_ROOM"><path codeLine="179" d="M614.632,482.4518 C628.556,488.4358 641.9,496.4118 652.4,507.0438 C664.494,519.2898 670.885,537.5048 674.257,552.8463 C674.3624,553.3257 674.4648,553.8023 674.5644,554.2758 C674.6141,554.5126 674.6632,554.7486 674.7116,554.9838 C674.7357,555.1014 674.7597,555.2188 674.7836,555.336 " fill="none" id="IWeatherRoom-backto-ROOM" style="stroke:#181818;stroke-width:0.4000000000000001;"/><polygon fill="none" points="609.688,480.4198,611.2963,482.8142,614.1251,482.2505,612.5168,479.8561,609.688,480.4198" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[d6a512e7b5ab49d31925169b362fb078]
+reverse link RepositoryRetrofitImpl to IWeatherApiRetrofit--><g id="link_RepositoryRetrofitImpl_IWeatherApiRetrofit"><path codeLine="182" d="M182.688,415.2798 C194.08,425.9798 207.004,438.1158 217.08,447.5798 " fill="none" id="RepositoryRetrofitImpl-backto-IWeatherApiRetrofit" style="stroke:#181818;stroke-width:0.4000000000000001;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="180.632,417.1918,176.716,409.6758,184.464,413.1118,180.632,417.1918" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[8d5d5fd64171d2678dee6767a1b1522f]
+reverse link RepositoryRetrofitImpl to IRepositoryByCityName--><g id="link_RepositoryRetrofitImpl_IRepositoryByCityName"><path codeLine="183" d="M153.384,417.6478 C151.684,447.5518 151.32,492.3638 163.2,503.8438 C167.148,507.6598 256.736,505.4718 262,507.0438 C304.432,519.7078 347.008,550.8838 368.892,568.5998 " fill="none" id="RepositoryRetrofitImpl-backto-IRepositoryByCityName" style="stroke:#181818;stroke-width:0.4000000000000001;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="150.592,417.4558,153.892,409.6478,156.18,417.8118,150.592,417.4558" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[bc5d406e2136c1fc0a613b1d291f354b]
+reverse link RepositoryRetrofitImpl to IRepositoryByLocation--><g id="link_RepositoryRetrofitImpl_IRepositoryByLocation"><path codeLine="184" d="M152.208,417.8558 C147.104,459.9958 137.656,538.0238 133.952,568.6398 " fill="none" id="RepositoryRetrofitImpl-backto-IRepositoryByLocation" style="stroke:#181818;stroke-width:0.4000000000000001;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="149.44,417.4118,153.184,409.8078,155,418.0838,149.44,417.4118" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[e760073132748fec45e8d2c5ab27c12b]
+reverse link WeatherDataBase to IWeatherDAO--><g id="link_WeatherDataBase_IWeatherDAO"><path codeLine="188" d="M799.408,602.6718 C795.868,611.9518 791.632,623.0598 787.836,633.0038 " fill="none" id="WeatherDataBase-backto-IWeatherDAO" style="stroke:#181818;stroke-width:0.4000000000000001;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="796.844,601.5358,802.312,595.0598,802.076,603.5318,796.844,601.5358" style="stroke:#181818;stroke-width:0.4000000000000001;"/></g><!--MD5=[ed76206e86e2a2bf05397fa65dbceeb9]
+link remote.retrofit to IRepositoryByLocation--><!--MD5=[4a2c1afd128bea93bcd03d712fd1918f]
+link local to IRepositoryByCityName--><!--MD5=[a985cc16f37535a793b6f8242361b6fb]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+title
+UML- діаграмма додатку Weather API
+end title
+
+package Model #FFFFCC {
+    class WeatherModel {
+        + cityName: String
+        + lat: Double
+        + lon: Double
+        + temperature: Double
+        ...
+        + getWorldCities(): List<WeatherModel>
+    }
+}
+
+package UI #00CCFF {
+
+    class MainActivity {
+    - {static}onNetwork: MutableLiveData<Boolean>
+    + {static}getOnNetwork(): MutableLiveData<Boolean>
+    }
+    abstract class BaseFragment{
+     #binding
+     #viewModel
+    }
+
+    class WeatherListFragment{
+        - binding
+        - viewModel
+        + getWeatherByNameCity().observe()
+    }
+    class WeatherListViewModel{
+    - listWeather: MutableLiveData<List<WeatherModel>>
+    - repository: IRepositoryByCityName
+    + getWeatherByNameCity(): MutableLiveData<WeatherModel>
+    + searchWeatherByNameCity(cityName: String):WeatherModel
+    + getCityListFromModel(): List<WeatherModel>
+    + getCityListFromRoom(): List<WeatherModel>
+    + deleteAllFromRoom()
+    }
+
+    class WeatherDetailsFragment{
+        - binding
+        - viewModel
+        + getWeatherDetailsAppState().observe()
+    }
+
+    class WeatherDetailsViewModel{
+        - weatherDetailsAppState: MutableLiveData<WeatherDetailsAppState>
+        - repository: IRepositoryByCityName
+        + getWeatherDetailsAppState(): MutableLiveData<WeatherDetailsAppState>
+        + getWeatherByCityName(weather: WeatherModel, network: Boolean)
+        + getWeatherByLocation(weather: WeatherModel)
+        + saveOrUpdateRoom(weather: WeatherModel, network: Boolean)
+    }
+
+}
+
+
+package AppState {
+
+class WeatherDetailsAppState {
+
+        + {abstract} Loading
+        }
+    class SuccessGetDetailsWeather {
+        + weather: WeatherModel
+    }
+    class ErrorGetDetailsWeather{
+        + errorString: String
+    }
+
+}
+
+package Repository #66FF99 {
+    interface IRepositoryByCityName {
+    {abstract}getWeatherDetailsByCityName(cityName: String, callbackResponse: ICallbackResponse)
+     }
+    interface IRepositoryByLocation {
+    {abstract}getWeatherDetailsByLocation(lat: Double, lon: Double, callbackResponse: ICallbackResponse)
+    }
+    interface ICallbackResponse {
+        {abstract}onCallbackResponse(callbackWeather: WeatherModel)
+        {abstract}onCallbackFailure(e: Exception)
+    }
+
+
+    package local {
+        interface IWeatherRoom {
+            + {abstract}getWeatherAll(callback : (List<WeatherModel>) -> Unit)
+            + {abstract}saveWeatherToRoom(weather: WeatherModel)
+            + {abstract}updateWeather(weather: WeatherModel)
+            + {abstract}deleteAll()
+        }
+        class RepositoryRoomImpl {
+            + getWeatherDetailsByCityName(cityName: String,callbackResponse: ICallbackResponse)
+            + getWeatherAll(callback: (List<WeatherModel>) -> Unit)
+            + saveWeatherToRoom(weather: WeatherModel)
+            + updateWeather(weather: WeatherModel)
+            + deleteAll()
+        }
+    }
+
+    package remote.retrofit {
+        class WeatherDTO {
+            + cityName: String
+            + lat: Double
+            + lon: Double
+            + temperature: Double
+            ...
+        }
+
+        interface IWeatherApiRetrofit {
+        + {abstract}getWeatherByCityName(): Call<WeatherDTO>
+        + {abstract}getWeatherByLocation(): Call<WeatherDTO>
+        }
+        class RepositoryRetrofitImpl {
+        - api: IWeatherApiRetrofit
+        + getWeatherDetailsByCityName(cityName: String,callbackResponse: ICallbackResponse)
+        + getWeatherDetailsByLocation(lat: Double,lon: Double,callbackResponse: ICallbackResponse)
+        }
+    }
+}
+
+
+'ROOM
+database "SQLite" {
+package "ROOM" #DDDDDD {
+    abstract class WeatherDataBase{
+    weatherDao(): IWeatherDAO
+    }
+    class WeatherEntity{
+        + cityName: String
+        + lat: Double
+        + lon: Double
+        + temperature: Double
+        ...
+    }
+    interface IWeatherDAO{
+    + {abstract}insertWeather(weatherEntity: WeatherEntity)
+    + {abstract}getWeatherAll(): List<WeatherEntity>
+    + {abstract}getWeatherByName(name: String): WeatherEntity
+    + {abstract}updateWeather(weatherEntity: WeatherEntity)
+    + {abstract}deleteAll()
+    }
+}
+
+
+'UI
+MainActivity *- - BaseFragment
+BaseFragment <|- - WeatherListFragment
+BaseFragment <|- - WeatherDetailsFragment
+WeatherListFragment *- - WeatherListViewModel
+WeatherDetailsFragment *- - WeatherDetailsViewModel
+
+WeatherDetailsViewModel o- - RepositoryRetrofitImpl
+WeatherDetailsViewModel o- - RepositoryRoomImpl
+
+'AppState
+WeatherDetailsAppState <|- - SuccessGetDetailsWeather
+WeatherDetailsAppState <|- - ErrorGetDetailsWeather
+WeatherDetailsViewModel o- - WeatherDetailsAppState
+
+WeatherListViewModel o- - RepositoryRoomImpl
+WeatherListViewModel o- - RepositoryRetrofitImpl
+'WeatherListViewModel o- - WeatherModel
+
+
+'Repository
+IRepositoryByCityName <|.. ICallbackResponse
+IRepositoryByLocation <|.. ICallbackResponse
+
+'Local
+RepositoryRoomImpl <|.. IWeatherRoom
+RepositoryRoomImpl <|.. IRepositoryByCityName
+
+IWeatherRoom o- - ROOM
+
+'remote
+RepositoryRetrofitImpl <|.. IWeatherApiRetrofit
+RepositoryRetrofitImpl <|.. IRepositoryByCityName
+RepositoryRetrofitImpl <|.. IRepositoryByLocation
+'IWeatherApiRetrofit <|.. WeatherDTO
+
+'Room
+WeatherDataBase <|.. IWeatherDAO
+'WeatherDataBase *- - WeatherEntity
+
+'allowmixing
+'together {
+'class WeatherModel
+'class WeatherListFragment
+'}
+
+
+'WeatherModel-[hidden]- ->IWeatherApiRetrofit
+
+'IRepositoryByCityName-[hidden]- -IRepositoryByLocation
+'IRepositoryByCityName-[hidden]- -ICallbackResponse
+'local-[hidden]- -IRepositoryByCityName
+'UI-[hidden]- ->WeatherDetailsAppState
+
+'Model-[hidden]- -> remote.retrofit
+
+remote.retrofit-[hidden]- ->IRepositoryByLocation
+local-[hidden]- ->IRepositoryByCityName
+
+
+'UI-[hidden]- ->AppState
+'Model-[hidden]- ->UI
+
+@enduml
+
+@startuml
+
+title
+UML- діаграмма додатку Weather API
+end title
+
+package Model #FFFFCC {
+    class WeatherModel {
+        + cityName: String
+        + lat: Double
+        + lon: Double
+        + temperature: Double
+        ...
+        + getWorldCities(): List<WeatherModel>
+    }
+}
+
+package UI #00CCFF {
+
+    class MainActivity {
+    - {static}onNetwork: MutableLiveData<Boolean>
+    + {static}getOnNetwork(): MutableLiveData<Boolean>
+    }
+    abstract class BaseFragment{
+     #binding
+     #viewModel
+    }
+
+    class WeatherListFragment{
+        - binding
+        - viewModel
+        + getWeatherByNameCity().observe()
+    }
+    class WeatherListViewModel{
+    - listWeather: MutableLiveData<List<WeatherModel>>
+    - repository: IRepositoryByCityName
+    + getWeatherByNameCity(): MutableLiveData<WeatherModel>
+    + searchWeatherByNameCity(cityName: String):WeatherModel
+    + getCityListFromModel(): List<WeatherModel>
+    + getCityListFromRoom(): List<WeatherModel>
+    + deleteAllFromRoom()
+    }
+
+    class WeatherDetailsFragment{
+        - binding
+        - viewModel
+        + getWeatherDetailsAppState().observe()
+    }
+
+    class WeatherDetailsViewModel{
+        - weatherDetailsAppState: MutableLiveData<WeatherDetailsAppState>
+        - repository: IRepositoryByCityName
+        + getWeatherDetailsAppState(): MutableLiveData<WeatherDetailsAppState>
+        + getWeatherByCityName(weather: WeatherModel, network: Boolean)
+        + getWeatherByLocation(weather: WeatherModel)
+        + saveOrUpdateRoom(weather: WeatherModel, network: Boolean)
+    }
+
+}
+
+
+package AppState {
+
+class WeatherDetailsAppState {
+
+        + {abstract} Loading
+        }
+    class SuccessGetDetailsWeather {
+        + weather: WeatherModel
+    }
+    class ErrorGetDetailsWeather{
+        + errorString: String
+    }
+
+}
+
+package Repository #66FF99 {
+    interface IRepositoryByCityName {
+    {abstract}getWeatherDetailsByCityName(cityName: String, callbackResponse: ICallbackResponse)
+     }
+    interface IRepositoryByLocation {
+    {abstract}getWeatherDetailsByLocation(lat: Double, lon: Double, callbackResponse: ICallbackResponse)
+    }
+    interface ICallbackResponse {
+        {abstract}onCallbackResponse(callbackWeather: WeatherModel)
+        {abstract}onCallbackFailure(e: Exception)
+    }
+
+
+    package local {
+        interface IWeatherRoom {
+            + {abstract}getWeatherAll(callback : (List<WeatherModel>) -> Unit)
+            + {abstract}saveWeatherToRoom(weather: WeatherModel)
+            + {abstract}updateWeather(weather: WeatherModel)
+            + {abstract}deleteAll()
+        }
+        class RepositoryRoomImpl {
+            + getWeatherDetailsByCityName(cityName: String,callbackResponse: ICallbackResponse)
+            + getWeatherAll(callback: (List<WeatherModel>) -> Unit)
+            + saveWeatherToRoom(weather: WeatherModel)
+            + updateWeather(weather: WeatherModel)
+            + deleteAll()
+        }
+    }
+
+    package remote.retrofit {
+        class WeatherDTO {
+            + cityName: String
+            + lat: Double
+            + lon: Double
+            + temperature: Double
+            ...
+        }
+
+        interface IWeatherApiRetrofit {
+        + {abstract}getWeatherByCityName(): Call<WeatherDTO>
+        + {abstract}getWeatherByLocation(): Call<WeatherDTO>
+        }
+        class RepositoryRetrofitImpl {
+        - api: IWeatherApiRetrofit
+        + getWeatherDetailsByCityName(cityName: String,callbackResponse: ICallbackResponse)
+        + getWeatherDetailsByLocation(lat: Double,lon: Double,callbackResponse: ICallbackResponse)
+        }
+    }
+}
+
+
+database "SQLite" {
+package "ROOM" #DDDDDD {
+    abstract class WeatherDataBase{
+    weatherDao(): IWeatherDAO
+    }
+    class WeatherEntity{
+        + cityName: String
+        + lat: Double
+        + lon: Double
+        + temperature: Double
+        ...
+    }
+    interface IWeatherDAO{
+    + {abstract}insertWeather(weatherEntity: WeatherEntity)
+    + {abstract}getWeatherAll(): List<WeatherEntity>
+    + {abstract}getWeatherByName(name: String): WeatherEntity
+    + {abstract}updateWeather(weatherEntity: WeatherEntity)
+    + {abstract}deleteAll()
+    }
+}
+
+
+MainActivity *- - BaseFragment
+BaseFragment <|- - WeatherListFragment
+BaseFragment <|- - WeatherDetailsFragment
+WeatherListFragment *- - WeatherListViewModel
+WeatherDetailsFragment *- - WeatherDetailsViewModel
+
+WeatherDetailsViewModel o- - RepositoryRetrofitImpl
+WeatherDetailsViewModel o- - RepositoryRoomImpl
+
+WeatherDetailsAppState <|- - SuccessGetDetailsWeather
+WeatherDetailsAppState <|- - ErrorGetDetailsWeather
+WeatherDetailsViewModel o- - WeatherDetailsAppState
+
+WeatherListViewModel o- - RepositoryRoomImpl
+WeatherListViewModel o- - RepositoryRetrofitImpl
+
+
+IRepositoryByCityName <|.. ICallbackResponse
+IRepositoryByLocation <|.. ICallbackResponse
+
+RepositoryRoomImpl <|.. IWeatherRoom
+RepositoryRoomImpl <|.. IRepositoryByCityName
+
+IWeatherRoom o- - ROOM
+
+RepositoryRetrofitImpl <|.. IWeatherApiRetrofit
+RepositoryRetrofitImpl <|.. IRepositoryByCityName
+RepositoryRetrofitImpl <|.. IRepositoryByLocation
+
+WeatherDataBase <|.. IWeatherDAO
+
+
+
+
+
+
+remote.retrofit-[hidden]- ->IRepositoryByLocation
+local-[hidden]- ->IRepositoryByCityName
+
+
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 20:01:30 EEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1251
+Language: ru
+Country: RU
+--></g></svg>

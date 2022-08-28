@@ -164,9 +164,9 @@ WeatherDetailsAppState <|-- SuccessGetDetailsWeather
 WeatherDetailsAppState <|-- ErrorGetDetailsWeather
 WeatherDetailsViewModel o-- WeatherDetailsAppState
 
-WeatherListViewModel o-- WeatherModel
 WeatherListViewModel o-- RepositoryRoomImpl
 WeatherListViewModel o-- RepositoryRetrofitImpl
+'WeatherListViewModel o-- WeatherModel
 
 
 'Repository
@@ -183,26 +183,33 @@ IWeatherRoom o-- ROOM
 RepositoryRetrofitImpl <|.. IWeatherApiRetrofit
 RepositoryRetrofitImpl <|.. IRepositoryByCityName
 RepositoryRetrofitImpl <|.. IRepositoryByLocation
-IWeatherApiRetrofit <|.. WeatherDTO
+'IWeatherApiRetrofit <|.. WeatherDTO
 
 'Room
 WeatherDataBase <|.. IWeatherDAO
-WeatherDataBase *-- WeatherEntity
+'WeatherDataBase *-- WeatherEntity
 
 'allowmixing
-'package UI
-'package Model
-'package Repository
-
 'together {
 'class WeatherModel
 'class WeatherListFragment
 '}
-'WeatherModel-[hidden]-->WeatherListFragment
 
 
+'WeatherModel-[hidden]-->IWeatherApiRetrofit
+
+'IRepositoryByCityName-[hidden]--IRepositoryByLocation
+'IRepositoryByCityName-[hidden]--ICallbackResponse
+'local-[hidden]--IRepositoryByCityName
 'UI-[hidden]-->WeatherDetailsAppState
+
+'Model-[hidden]--> remote.retrofit
+
+remote.retrofit-[hidden]-->IRepositoryByLocation
+local-[hidden]-->IRepositoryByCityName
+
 
 'UI-[hidden]-->AppState
 'Model-[hidden]-->UI
+
 @enduml
