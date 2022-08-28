@@ -24,5 +24,6 @@
 * [Room](https://developer.android.com/training/data-storage/room) - Бібліотека ORM (object mapping library) для SQLite
 * [Retrofit](https://square.github.io/retrofit/) - Типозахищений HTTP-клієнт для Android i Java
   
-
+### UML-діаграма
+![](UML_diagram.png)
 
