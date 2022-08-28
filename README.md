@@ -18,10 +18,10 @@
 * [Kotlin](https://kotlinlang.org/) - Офіційна мова програмування для розробки Android
 * [Android Architecture Components](https://developer.android.com/topic/architecture) - Колекція бібліотек для розробки надійні програми, 
 які можна тестувати та підтримувати
-  * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Об’єкти даних, які сповіщають спостережників про свої зміни
-  * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Клас, який призначений для зберігання та керування даними, пов’язаними з інтерфейсом користувача, 
-  з урахуванням життєвого циклу
-  * [Room](https://developer.android.com/training/data-storage/room) - Бібліотека ORM (object mapping library) для SQLite
+* [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Об’єкти даних, які сповіщають спостережників про свої зміни
+* [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Клас, який призначений для зберігання та керування даними, пов’язаними з інтерфейсом користувача, 
+з урахуванням життєвого циклу
+* [Room](https://developer.android.com/training/data-storage/room) - Бібліотека ORM (object mapping library) для SQLite
 * [Retrofit](https://square.github.io/retrofit/) - Типозахищений HTTP-клієнт для Android i Java
   
 
