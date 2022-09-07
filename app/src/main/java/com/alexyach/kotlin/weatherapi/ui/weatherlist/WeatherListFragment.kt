@@ -14,9 +14,11 @@ import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.alexyach.kotlin.weatherapi.MainActivity
 import com.alexyach.kotlin.weatherapi.MainActivity.Companion.getOnNetwork
 import com.alexyach.kotlin.weatherapi.R
 import com.alexyach.kotlin.weatherapi.databinding.FragmentWeatherListBinding
@@ -48,8 +50,7 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Menu
-        setHasOptionsMenu(true)
+        setupMenu()
 
         locationManager =
             requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
@@ -244,8 +245,8 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
             .commit()
     }
 
-    private fun showViewWhenIsNetwork(b: Boolean) {
-        if (b) {
+    private fun showViewWhenIsNetwork(isNetwork: Boolean) {
+        if (isNetwork) {
             with(binding) {
                 weatherListEditText.visibility = View.VISIBLE
                 weatherListButtonSearch.visibility = View.VISIBLE
@@ -264,22 +265,31 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
     }
 
     /** Menu */
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_weather_list_fragment, menu)
-        return super.onCreateOptionsMenu(menu, inflater)
+    private fun setupMenu() {
+        (requireActivity() as MenuHost).addMenuProvider(object: MenuProvider {
+
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.menu_weather_list_fragment, menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                return when(menuItem.itemId) {
+                    R.id.action_delete_room -> {
+                        actionDeleteRoom()
+                        true
+                    }
+                    else -> false
+                }
+            }
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_delete_room -> {
-                viewModel.deleteAllFromRoom()
-                // Оновили
-                if (networkOrRoom) {
-                    viewModel.getCityList(!networkOrRoom)
-                }
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+    private fun actionDeleteRoom() {
+        viewModel.deleteAllFromRoom()
+
+        // Оновили
+        if (networkOrRoom) {
+            viewModel.getCityList(!networkOrRoom)
         }
     }
 
