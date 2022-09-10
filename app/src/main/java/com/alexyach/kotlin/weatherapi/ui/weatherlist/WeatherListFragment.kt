@@ -72,7 +72,8 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
     private fun observingLiveData() {
 
         // Завантаження список міст
-        viewModel.cityListLiveData().observe(viewLifecycleOwner) { dataList -> setAdapter(dataList) }
+        viewModel.cityListLiveData()
+            .observe(viewLifecycleOwner) { dataList -> setAdapter(dataList) }
 
         // Пошук за назвою міста
         viewModel.getWeatherByNameCity()
@@ -124,12 +125,7 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
                 toast(R.string.no_internet)
                 return@setOnClickListener
             }
-
-            if (networkOrRoom) {
-                viewModel.getCityList(networkOrRoom)
-            } else {
-                viewModel.getCityList(networkOrRoom)
-            }
+            viewModel.getCityList(networkOrRoom)
             showViewWhenIsNetwork(networkOrRoom)
             networkOrRoom = !networkOrRoom
 
@@ -144,25 +140,25 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
 
     /** Отримати локацію по поточним координатам */
     private fun getLocation() {
-            if (ActivityCompat.checkSelfPermission(
-                    requireContext(),
-                    Manifest.permission.ACCESS_FINE_LOCATION
-                ) == PackageManager.PERMISSION_GRANTED
-            ) {
-                // Якщо працює GPS
-                if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                    locationManager.requestLocationUpdates(
-                        LocationManager.GPS_PROVIDER,
-                        0L,
-                        Float.MAX_VALUE, // Це- милиця, щоб не оновлював постйно  дані
-                        locationListener
-                    )
-                } else {
-                    toast(R.string.no_gps)
-                }
+        if (ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
+            // Якщо працює GPS
+            if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                locationManager.requestLocationUpdates(
+                    LocationManager.GPS_PROVIDER,
+                    0L,
+                    Float.MAX_VALUE, // Це- милиця, щоб не оновлював постйно  дані
+                    locationListener
+                )
             } else {
-                Log.d("myLogs", "getLocation - немає дозволу")
+                toast(R.string.no_gps)
             }
+        } else {
+            Log.d("myLogs", "getLocation - немає дозволу")
+        }
     }
 
     private val locationListener = object : LocationListener {
@@ -225,6 +221,7 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
+
     /** ************** */
 
     private fun setAdapter(weatherList: List<WeatherModel>) {
@@ -245,8 +242,8 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
             .commit()
     }
 
-    private fun showViewWhenIsNetwork(isNetwork: Boolean) {
-        if (isNetwork) {
+    private fun showViewWhenIsNetwork(networkOrRoom: Boolean) {
+        if (networkOrRoom) {
             with(binding) {
                 weatherListEditText.visibility = View.VISIBLE
                 weatherListButtonSearch.visibility = View.VISIBLE
@@ -266,14 +263,14 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
 
     /** Menu */
     private fun setupMenu() {
-        (requireActivity() as MenuHost).addMenuProvider(object: MenuProvider {
+        (requireActivity() as MenuHost).addMenuProvider(object : MenuProvider {
 
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
                 menuInflater.inflate(R.menu.menu_weather_list_fragment, menu)
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                return when(menuItem.itemId) {
+                return when (menuItem.itemId) {
                     R.id.action_delete_room -> {
                         actionDeleteRoom()
                         true
@@ -286,11 +283,12 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
 
     private fun actionDeleteRoom() {
         viewModel.deleteAllFromRoom()
-
+//        adapter.notifyDataSetChanged()
         // Оновили
-        if (networkOrRoom) {
-            viewModel.getCityList(!networkOrRoom)
+        if (isNetwork) {
+            viewModel.getCityList(isNetwork)
         }
+//        Log.d("myLogs", "WeatherListFragment actionDelete: $networkOrRoom")
     }
 
     // Сховати клавіатуру
@@ -303,5 +301,4 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
     companion object {
         fun newInstance() = WeatherListFragment()
     }
-
 }

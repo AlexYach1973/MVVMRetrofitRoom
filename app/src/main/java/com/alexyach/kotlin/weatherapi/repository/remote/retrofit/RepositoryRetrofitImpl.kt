@@ -44,10 +44,8 @@ class RepositoryRetrofitImpl : IRepositoryByCityName, IRepositoryByLocation {
         response.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                { parseResponseCode(it, callbackResponse)
-                    Log.d("myLogs", " RepositoryRetrofitImpl Success")},
-                { callbackResponse.onCallbackFailure(IOException())
-                    Log.d("myLogs", " RepositoryRetrofitImpl Failure")}
+                { parseResponseCode(it, callbackResponse)},
+                { callbackResponse.onCallbackFailure(IOException())}
             )
     }
 
@@ -63,13 +61,8 @@ class RepositoryRetrofitImpl : IRepositoryByCityName, IRepositoryByLocation {
         response.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                {
-                    parseResponseCode(it, callbackResponse)
-                    Log.d("myLogs", " RepositoryRetrofitImpl Success")
-                },
-                { callbackResponse.onCallbackFailure(IOException("Не відома помилка"))
-                    Log.d("myLogs", " RepositoryRetrofitImpl Failure")
-                }
+                {parseResponseCode(it, callbackResponse)},
+                { callbackResponse.onCallbackFailure(IOException("Не відома помилка"))}
             )
 
     }

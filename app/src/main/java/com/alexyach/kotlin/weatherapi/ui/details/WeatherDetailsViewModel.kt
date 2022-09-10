@@ -3,7 +3,6 @@ package com.alexyach.kotlin.weatherapi.ui.details
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.alexyach.kotlin.weatherapi.WeatherApiApp.Companion.getWeatherApiApp
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
@@ -80,9 +79,6 @@ class WeatherDetailsViewModel(
                     WeatherDetailsAppState
                         .SuccessGetDetailsWeather(callbackWeather)
                 )
-
-                // Записуємо чи оновлюємо Room
-                saveOrUpdateRoom(callbackWeather, network)
             }
 
             override fun onCallbackFailure(e: Exception) {
@@ -93,6 +89,8 @@ class WeatherDetailsViewModel(
             }
         })
 
+        // Записуємо чи оновлюємо Room
+        saveOrUpdateRoom(weather, network)
     }
 
     private fun choiceRepository(network: Boolean) {
@@ -103,20 +101,16 @@ class WeatherDetailsViewModel(
         }
     }
 
-    fun saveOrUpdateRoom(weather: WeatherModel, network: Boolean) {
+    private fun saveOrUpdateRoom(weather: WeatherModel, network: Boolean) {
         if (!network) return
 
-        RepositoryRoomImpl().getWeatherAll() {weathersFromRoom ->
-            if ((weathersFromRoom.filter { it.cityName == weather.cityName }).isEmpty()) {
-
-                // Записуємо
-                RepositoryRoomImpl().saveWeatherToRoom(weather)
-            } else {
-
-                // Оновлюємо
-                RepositoryRoomImpl().updateWeather(weather)
+        RepositoryRoomImpl()
+            .updateForCityName(weather) { responseInt ->
+                if (responseInt == 0) {
+                    // Записуємо
+                    RepositoryRoomImpl().saveWeatherToRoom(weather)
+                }
             }
-        }
     }
 
 }

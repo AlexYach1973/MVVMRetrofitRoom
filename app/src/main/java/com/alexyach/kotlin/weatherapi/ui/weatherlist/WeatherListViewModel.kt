@@ -1,5 +1,6 @@
 package com.alexyach.kotlin.weatherapi.ui.weatherlist
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
@@ -20,10 +21,12 @@ class WeatherListViewModel(
 
     private val weatherByNameCity: MutableLiveData<WeatherModel> = MutableLiveData<WeatherModel>()
     fun getWeatherByNameCity(): MutableLiveData<WeatherModel> {
+        Log.d("myLogs", "WeatherListViewModel: weatherByNameCity")
         return weatherByNameCity
     }
 
     fun getCityList(network: Boolean) {
+        Log.d("myLogs", "WeatherListViewModel: getCityList")
         if (network) {
             getCityListFromModel()
         } else {

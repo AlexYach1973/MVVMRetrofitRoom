@@ -42,16 +42,13 @@ class WeatherDetailsFragment : BaseFragment<FragmentWeatherDetailsBinding,
 
         isNetwork = arguments?.getBoolean(KEY_PARAM_IS_NETWORK) ?: false
 
+        viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
+
         /** Спостереження */
         viewModel.getWeatherDetailsAppState().observe(viewLifecycleOwner) {
             getResponseAppState(it)
         }
-        // мережа
-        getOnNetwork().observe(viewLifecycleOwner
-        ) { network ->
-            isNetwork = network
-            viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
-        }
+
     }
 
     private fun getResponseAppState(state: WeatherDetailsAppState) {
