@@ -73,7 +73,9 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
 
         // Завантаження список міст
         viewModel.cityListLiveData()
-            .observe(viewLifecycleOwner) { dataList -> setAdapter(dataList) }
+            .observe(viewLifecycleOwner) { dataList ->
+                setAdapter(dataList)
+            }
 
         // Пошук за назвою міста
         viewModel.getWeatherByNameCity()
@@ -238,6 +240,7 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
         requireActivity().supportFragmentManager.beginTransaction()
             .hide(this)
             .add(R.id.container, WeatherDetailsFragment.newInstance(weather, isNetwork))
+            .setReorderingAllowed(true) // щось там оптимізує при переході
             .addToBackStack("DetailsFragment")
             .commit()
     }

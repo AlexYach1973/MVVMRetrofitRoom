@@ -16,6 +16,7 @@ class WeatherListViewModel(
 ) : ViewModel() {
 
     fun cityListLiveData(): MutableLiveData<List<WeatherModel>> {
+        Log.d("myLogs", "WeatherListViewModel, cityListLiveData")
         return listWeather
     }
 
