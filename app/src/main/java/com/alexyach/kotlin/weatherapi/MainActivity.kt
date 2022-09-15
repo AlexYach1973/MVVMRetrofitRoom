@@ -12,15 +12,39 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.lifecycle.MutableLiveData
 import com.alexyach.kotlin.weatherapi.databinding.ActivityMainBinding
+import com.alexyach.kotlin.weatherapi.di.SourcesModule
+import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
+import com.alexyach.kotlin.weatherapi.repository.IRepositoryByLocation
 import com.alexyach.kotlin.weatherapi.ui.weatherlist.WeatherListFragment
-
+import dagger.hilt.android.AndroidEntryPoint
+import retrofit2.Retrofit
+import javax.inject.Inject
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    /** TEST */
+    @Inject
+    @SourcesModule.RetrofitImpl
+    lateinit var testInject : IRepositoryByCityName
+    @Inject
+    @SourcesModule.RoomImpl
+    lateinit var testInject1 : IRepositoryByCityName
+    @Inject
+    lateinit var testInject2 : IRepositoryByLocation
+    @Inject
+    lateinit var retrofit: Retrofit
+
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        /** TEST */
+//        Log.d("myLogs", "MainActivity Inject retrofitImpl: $testInject")
+//        Log.d("myLogs", "MainActivity Inject room: $testInject1")
+//        Log.d("myLogs", "MainActivity Inject Location: $testInject2")
+//        Log.d("myLogs", "MainActivity Inject Retrofit: $retrofit")
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

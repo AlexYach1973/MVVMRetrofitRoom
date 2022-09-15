@@ -15,8 +15,10 @@ import com.alexyach.kotlin.weatherapi.ui.base.BaseFragment
 import com.alexyach.kotlin.weatherapi.utils.KEY_PARAM_IS_NETWORK
 import com.alexyach.kotlin.weatherapi.utils.KEY_PARAM_WEATHER
 import com.alexyach.kotlin.weatherapi.utils.loadImageWeather
+import dagger.hilt.android.AndroidEntryPoint
 import kotlin.properties.Delegates
 
+@AndroidEntryPoint
 class WeatherDetailsFragment : BaseFragment<FragmentWeatherDetailsBinding,
         WeatherDetailsViewModel>() {
 

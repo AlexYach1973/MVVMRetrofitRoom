@@ -13,8 +13,11 @@ import io.reactivex.schedulers.Schedulers
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class RepositoryRoomImpl : IRepositoryByCityName, IWeatherRoom {
+//@Singleton
+class RepositoryRoomImpl @Inject constructor() : IRepositoryByCityName, IWeatherRoom {
 
     @SuppressLint("CheckResult")
     override fun getWeatherDetailsByCityName(

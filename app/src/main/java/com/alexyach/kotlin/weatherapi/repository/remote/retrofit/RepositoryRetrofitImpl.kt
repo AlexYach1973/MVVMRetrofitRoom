@@ -17,12 +17,18 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import java.io.IOException
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class RepositoryRetrofitImpl : IRepositoryByCityName, IRepositoryByLocation {
+//@Singleton // або вказати в модулі SourcesModule()
+class RepositoryRetrofitImpl @Inject constructor(
+    retrofit: Retrofit
+) : IRepositoryByCityName, IRepositoryByLocation {
 
     /** Rx */
-    private val retrofitImpl = Retrofit.Builder().apply {
+    /*private val retrofitImpl = Retrofit.Builder().apply {
         baseUrl(OPENWEATHERMAP_BASE_URL)
         addConverterFactory(
             GsonConverterFactory.create(GsonBuilder().setLenient().create())
@@ -31,7 +37,9 @@ class RepositoryRetrofitImpl : IRepositoryByCityName, IRepositoryByLocation {
     }
 
     private val api: IWeatherApiRetrofit =
-        retrofitImpl.build().create(IWeatherApiRetrofit::class.java)
+        retrofitImpl.build().create(IWeatherApiRetrofit::class.java)*/
+
+    private val api = retrofit.create(IWeatherApiRetrofit::class.java)
 
     @SuppressLint("CheckResult")
     override fun getWeatherDetailsByCityName(

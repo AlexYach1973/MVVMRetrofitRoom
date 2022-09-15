@@ -3,23 +3,33 @@ package com.alexyach.kotlin.weatherapi.ui.details
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.alexyach.kotlin.weatherapi.di.SourcesModule
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.repository.local.RepositoryRoomImpl
 import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.RepositoryRetrofitImpl
 import com.alexyach.kotlin.weatherapi.utils.KEY_GET_WEATHER_BY
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 const val TAG = "myLogs"
 
-class WeatherDetailsViewModel(
-    private val weatherDetailsAppState: MutableLiveData<WeatherDetailsAppState> =
-        MutableLiveData<WeatherDetailsAppState>()
-) : ViewModel() {
+@HiltViewModel
+class WeatherDetailsViewModel @Inject constructor() : ViewModel() {
+
+    @Inject
+    @SourcesModule.RetrofitImpl
+    lateinit var repositoryRetrofit : IRepositoryByCityName
+    @Inject
+    @SourcesModule.RoomImpl
+    lateinit var repositoryRoom : IRepositoryByCityName
 
     private lateinit var repository: IRepositoryByCityName
 
     /** LiveData */
+    private val weatherDetailsAppState: MutableLiveData<WeatherDetailsAppState> =
+        MutableLiveData<WeatherDetailsAppState>()
     fun getWeatherDetailsAppState(): MutableLiveData<WeatherDetailsAppState> {
         return weatherDetailsAppState
     }
@@ -95,9 +105,11 @@ class WeatherDetailsViewModel(
 
     private fun choiceRepository(network: Boolean) {
         repository = if (network) {
-            RepositoryRetrofitImpl()
+            repositoryRetrofit
+//            RepositoryRetrofitImpl()
         } else {
-            RepositoryRoomImpl()
+            repositoryRoom
+//            RepositoryRoomImpl()
         }
     }
 
