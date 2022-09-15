@@ -22,22 +22,10 @@ import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton
 
-//@Singleton // або вказати в модулі SourcesModule()
+@Singleton // або вказати в модулі SourcesModule()
 class RepositoryRetrofitImpl @Inject constructor(
     retrofit: Retrofit
 ) : IRepositoryByCityName, IRepositoryByLocation {
-
-    /** Rx */
-    /*private val retrofitImpl = Retrofit.Builder().apply {
-        baseUrl(OPENWEATHERMAP_BASE_URL)
-        addConverterFactory(
-            GsonConverterFactory.create(GsonBuilder().setLenient().create())
-        )
-        addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
-    }
-
-    private val api: IWeatherApiRetrofit =
-        retrofitImpl.build().create(IWeatherApiRetrofit::class.java)*/
 
     private val api = retrofit.create(IWeatherApiRetrofit::class.java)
 

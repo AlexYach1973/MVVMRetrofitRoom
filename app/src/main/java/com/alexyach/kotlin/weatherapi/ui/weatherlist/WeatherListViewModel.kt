@@ -1,6 +1,5 @@
 package com.alexyach.kotlin.weatherapi.ui.weatherlist
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.alexyach.kotlin.weatherapi.di.SourcesModule
@@ -8,20 +7,18 @@ import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.model.getWorldCities
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
+import com.alexyach.kotlin.weatherapi.repository.local.IWeatherRoom
 import com.alexyach.kotlin.weatherapi.repository.local.RepositoryRoomImpl
-import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.RepositoryRetrofitImpl
 import com.alexyach.kotlin.weatherapi.utils.NOT_FOUND_CITY
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class WeatherListViewModel @Inject constructor(
-
-) : ViewModel() {
-
-    @Inject
     @SourcesModule.RetrofitImpl
-    lateinit var retrofitImpl : IRepositoryByCityName
+    val retrofitImpl : IRepositoryByCityName,
+    private val roomImpl: IWeatherRoom
+) : ViewModel() {
 
     private val listWeather: MutableLiveData<List<WeatherModel>> =
         MutableLiveData<List<WeatherModel>>()
@@ -31,12 +28,10 @@ class WeatherListViewModel @Inject constructor(
 
     private val weatherByNameCity: MutableLiveData<WeatherModel> = MutableLiveData<WeatherModel>()
     fun getWeatherByNameCity(): MutableLiveData<WeatherModel> {
-//        Log.d("myLogs", "WeatherListViewModel: weatherByNameCity")
         return weatherByNameCity
     }
 
     fun getCityList(network: Boolean) {
-//        Log.d("myLogs", "WeatherListViewModel: getCityList")
         if (network) {
             getCityListFromModel()
         } else {
@@ -45,7 +40,6 @@ class WeatherListViewModel @Inject constructor(
     }
 
     fun searchWeatherByNameCity(cityName: String) {
-//        RepositoryRetrofitImpl().getWeatherDetailsByCityName(cityName, object : ICallbackResponse {
         retrofitImpl.getWeatherDetailsByCityName(cityName, object : ICallbackResponse {
             override fun onCallbackResponse(callbackWeather: WeatherModel) {
                 weatherByNameCity.postValue(callbackWeather)
@@ -66,13 +60,13 @@ class WeatherListViewModel @Inject constructor(
 
     // Завантаження міст з Room
     private fun getCityListFromRoom() {
-        RepositoryRoomImpl().getWeatherAll(){weathersFromRoom ->
+        roomImpl.getWeatherAll(){weathersFromRoom ->
             listWeather.postValue(weathersFromRoom)
         }
     }
 
     fun deleteAllFromRoom(){
-        RepositoryRoomImpl().deleteAll()
+        roomImpl.deleteAll()
     }
 
 }

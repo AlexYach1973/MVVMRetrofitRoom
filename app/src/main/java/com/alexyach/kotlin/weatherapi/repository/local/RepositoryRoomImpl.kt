@@ -2,10 +2,10 @@ package com.alexyach.kotlin.weatherapi.repository.local
 
 import android.annotation.SuppressLint
 import android.util.Log
-import com.alexyach.kotlin.weatherapi.WeatherApiApp
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
+import com.alexyach.kotlin.weatherapi.room.IWeatherDAO
 import com.alexyach.kotlin.weatherapi.utils.converterWeatherEntityToWeatherModel
 import com.alexyach.kotlin.weatherapi.utils.converterWeatherModelToWeatherEntity
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -14,10 +14,11 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
-import javax.inject.Singleton
 
 //@Singleton
-class RepositoryRoomImpl @Inject constructor() : IRepositoryByCityName, IWeatherRoom {
+class RepositoryRoomImpl @Inject constructor(
+    private val weatherDao: IWeatherDAO
+) : IRepositoryByCityName, IWeatherRoom {
 
     @SuppressLint("CheckResult")
     override fun getWeatherDetailsByCityName(
@@ -26,7 +27,7 @@ class RepositoryRoomImpl @Inject constructor() : IRepositoryByCityName, IWeather
     ) {
 
         // Room
-        WeatherApiApp.getWeatherDataBase().weatherDao().getWeatherByName(cityName)
+        weatherDao.getWeatherByName(cityName)
             // Rx
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -46,8 +47,10 @@ class RepositoryRoomImpl @Inject constructor() : IRepositoryByCityName, IWeather
     @SuppressLint("CheckResult")
     override fun getWeatherAll(callback: (List<WeatherModel>) -> Unit) {
 
+        Log.d("myLogs","MainActivity @Inject: $weatherDao")
+
         // Room
-        WeatherApiApp.getWeatherDataBase().weatherDao().getWeatherAll()
+        weatherDao.getWeatherAll()
             // Rx
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -65,7 +68,7 @@ class RepositoryRoomImpl @Inject constructor() : IRepositoryByCityName, IWeather
             date = currentDate
         }
         // Room
-        WeatherApiApp.getWeatherDataBase().weatherDao().insertWeather(weatherEntity)
+        weatherDao.insertWeather(weatherEntity)
             // Rx
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -81,8 +84,7 @@ class RepositoryRoomImpl @Inject constructor() : IRepositoryByCityName, IWeather
     override fun updateForCityName(weather: WeatherModel, responseInt: (Int) -> Unit) {
         val currentDate = SimpleDateFormat("dd MMM yyyy hh:mm:ss", Locale.ENGLISH).format(Date())
 
-        WeatherApiApp.getWeatherDataBase().weatherDao()
-            .updateForCityName(currentDate, weather.cityName)
+        weatherDao.updateForCityName(currentDate, weather.cityName)
             // Rx
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -98,7 +100,7 @@ class RepositoryRoomImpl @Inject constructor() : IRepositoryByCityName, IWeather
     @SuppressLint("CheckResult")
     override fun deleteAll() {
         // Room
-        WeatherApiApp.getWeatherDataBase().weatherDao().deleteAll()
+        weatherDao.deleteAll()
             // Rx
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())

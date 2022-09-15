@@ -2,6 +2,7 @@ package com.alexyach.kotlin.weatherapi.di
 
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByLocation
+import com.alexyach.kotlin.weatherapi.repository.local.IWeatherRoom
 import com.alexyach.kotlin.weatherapi.repository.local.RepositoryRoomImpl
 import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.RepositoryRetrofitImpl
 import dagger.Binds
@@ -15,7 +16,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 abstract class SourcesModule {
 
-    // Дві різні імплементації одного інтерфейсу
+    /** Дві різні імплементації одного інтерфейсу */
     @Qualifier
     annotation class RetrofitImpl
 
@@ -24,7 +25,7 @@ abstract class SourcesModule {
 
     @Binds
     @RetrofitImpl // перша
-    @Singleton // або вказати в RepositoryRetrofitImpl
+//    @Singleton // або вказати в RepositoryRetrofitImpl
     abstract fun bindIRepositoryByCityNameRetrofit(
         impl: RepositoryRetrofitImpl
     ): IRepositoryByCityName
@@ -32,11 +33,17 @@ abstract class SourcesModule {
 
     @Binds
     @RoomImpl // друга
-    @Singleton // або вказати в RepositoryRoomImpl
+//    @Singleton // або вказати в RepositoryRoomImpl
     abstract fun bindIRepositoryByCityNameRoom(
         impl: RepositoryRoomImpl
     ): IRepositoryByCityName
 
+    /** --- */
+
+    @Binds
+    abstract fun bindRoomImpl(
+        impl: RepositoryRoomImpl
+    ): IWeatherRoom
 
 
     @Binds

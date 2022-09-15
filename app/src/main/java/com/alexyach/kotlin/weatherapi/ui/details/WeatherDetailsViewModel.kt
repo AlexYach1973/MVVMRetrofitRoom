@@ -7,8 +7,10 @@ import com.alexyach.kotlin.weatherapi.di.SourcesModule
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
+import com.alexyach.kotlin.weatherapi.repository.local.IWeatherRoom
 import com.alexyach.kotlin.weatherapi.repository.local.RepositoryRoomImpl
 import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.RepositoryRetrofitImpl
+import com.alexyach.kotlin.weatherapi.room.IWeatherDAO
 import com.alexyach.kotlin.weatherapi.utils.KEY_GET_WEATHER_BY
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -16,14 +18,13 @@ import javax.inject.Inject
 const val TAG = "myLogs"
 
 @HiltViewModel
-class WeatherDetailsViewModel @Inject constructor() : ViewModel() {
-
-    @Inject
+class WeatherDetailsViewModel @Inject constructor(
     @SourcesModule.RetrofitImpl
-    lateinit var repositoryRetrofit : IRepositoryByCityName
-    @Inject
+    val repositoryRetrofit : IRepositoryByCityName,
     @SourcesModule.RoomImpl
-    lateinit var repositoryRoom : IRepositoryByCityName
+    val repositoryRoom : IRepositoryByCityName,
+    private val roomImpl: IWeatherRoom
+) : ViewModel() {
 
     private lateinit var repository: IRepositoryByCityName
 
@@ -106,21 +107,18 @@ class WeatherDetailsViewModel @Inject constructor() : ViewModel() {
     private fun choiceRepository(network: Boolean) {
         repository = if (network) {
             repositoryRetrofit
-//            RepositoryRetrofitImpl()
         } else {
             repositoryRoom
-//            RepositoryRoomImpl()
         }
     }
 
     private fun saveOrUpdateRoom(weather: WeatherModel, network: Boolean) {
         if (!network) return
 
-        RepositoryRoomImpl()
-            .updateForCityName(weather) { responseInt ->
+        roomImpl.updateForCityName(weather) { responseInt ->
                 if (responseInt == 0) {
                     // Записуємо
-                    RepositoryRoomImpl().saveWeatherToRoom(weather)
+                    roomImpl.saveWeatherToRoom(weather)
                 }
             }
     }
