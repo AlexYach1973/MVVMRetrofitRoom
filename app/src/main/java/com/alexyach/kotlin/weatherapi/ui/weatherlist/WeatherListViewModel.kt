@@ -31,6 +31,7 @@ class WeatherListViewModel @Inject constructor(
         return weatherByNameCity
     }
 
+
     fun getCityList(network: Boolean) {
         if (network) {
             getCityListFromModel()

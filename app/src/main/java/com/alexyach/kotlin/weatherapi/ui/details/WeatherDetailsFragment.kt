@@ -5,15 +5,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import coil.load
-import com.alexyach.kotlin.weatherapi.MainActivity.Companion.getOnNetwork
 import com.alexyach.kotlin.weatherapi.R
 import com.alexyach.kotlin.weatherapi.databinding.FragmentWeatherDetailsBinding
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.ui.base.BaseFragment
 import com.alexyach.kotlin.weatherapi.utils.KEY_PARAM_IS_NETWORK
 import com.alexyach.kotlin.weatherapi.utils.KEY_PARAM_WEATHER
+import com.alexyach.kotlin.weatherapi.utils.NetworkAccess
 import com.alexyach.kotlin.weatherapi.utils.loadImageWeather
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.properties.Delegates
@@ -42,14 +43,23 @@ class WeatherDetailsFragment : BaseFragment<FragmentWeatherDetailsBinding,
             getParcelable<WeatherModel>(KEY_PARAM_WEATHER)
         } ?: WeatherModel()
 
-        isNetwork = arguments?.getBoolean(KEY_PARAM_IS_NETWORK) ?: false
+//        isNetwork = arguments?.getBoolean(KEY_PARAM_IS_NETWORK) ?: false
 
-        viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
+//        viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
 
         /** Спостереження */
         viewModel.getWeatherDetailsAppState().observe(viewLifecycleOwner) {
             getResponseAppState(it)
         }
+
+        // Стан мережі
+        NetworkAccess.getOnNetwork().observe(viewLifecycleOwner, object: Observer<Boolean> {
+            override fun onChanged(t: Boolean) {
+                isNetwork = t
+                viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
+            }
+
+        })
 
     }
 

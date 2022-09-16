@@ -19,18 +19,16 @@ import androidx.core.view.MenuProvider
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.alexyach.kotlin.weatherapi.MainActivity.Companion.getOnNetwork
 import com.alexyach.kotlin.weatherapi.R
 import com.alexyach.kotlin.weatherapi.databinding.FragmentWeatherListBinding
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
-import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.ui.base.BaseFragment
 import com.alexyach.kotlin.weatherapi.ui.details.WeatherDetailsFragment
 import com.alexyach.kotlin.weatherapi.utils.KEY_GET_WEATHER_BY
 import com.alexyach.kotlin.weatherapi.utils.NOT_FOUND_CITY
+import com.alexyach.kotlin.weatherapi.utils.NetworkAccess.Companion.getOnNetwork
 import com.alexyach.kotlin.weatherapi.utils.REQUEST_CODE_LOCATION
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
@@ -40,10 +38,7 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
         ViewModelProvider(this)[WeatherListViewModel::class.java]
     }
 
-    /** TEST */
-//    @Inject lateinit var testInject : IRepositoryByCityName
-
-        override fun getViewBinding(
+    override fun getViewBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ) = FragmentWeatherListBinding.inflate(inflater, container, false)
@@ -74,8 +69,6 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
         // Кнопка пошуку по назві міста
         buttonSearchByNameCity()
 
-        /** TEST */
-//         Log.d("myLogs", "WeatherListFragment Inject: $testInject")
     }
 
     /** Спостереження */
@@ -84,7 +77,9 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
         // Завантаження список міст
         viewModel.cityListLiveData()
             .observe(viewLifecycleOwner) { dataList ->
-                setAdapter(dataList)
+                if (networkOrRoom) {
+                    setAdapter(dataList)
+                }
             }
 
         // Пошук за назвою міста
@@ -110,8 +105,8 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
                 isNetwork = network
                 networkOrRoom = !network
             }
-
         })
+
     }
 
     private fun buttonSearchByNameCity() {
