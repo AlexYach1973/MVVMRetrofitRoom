@@ -8,9 +8,7 @@ import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.repository.local.IWeatherRoom
-import com.alexyach.kotlin.weatherapi.repository.local.RepositoryRoomImpl
 import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.RepositoryRetrofitImpl
-import com.alexyach.kotlin.weatherapi.room.IWeatherDAO
 import com.alexyach.kotlin.weatherapi.utils.KEY_GET_WEATHER_BY
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

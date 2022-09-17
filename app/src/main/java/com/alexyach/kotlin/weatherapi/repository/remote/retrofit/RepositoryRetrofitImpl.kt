@@ -1,23 +1,17 @@
 package com.alexyach.kotlin.weatherapi.repository.remote.retrofit
 
 import android.annotation.SuppressLint
-import android.util.Log
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByLocation
 import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.weatherDTO.WeatherDTO
-import com.alexyach.kotlin.weatherapi.utils.OPENWEATHERMAP_BASE_URL
 import com.alexyach.kotlin.weatherapi.utils.WEATHER_API_KEY_VALUE
 import com.alexyach.kotlin.weatherapi.utils.converterWeatherDtoToWeatherModel
-import com.google.gson.GsonBuilder
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Response
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton

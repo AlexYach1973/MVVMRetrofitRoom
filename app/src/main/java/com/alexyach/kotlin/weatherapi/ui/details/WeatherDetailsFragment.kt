@@ -54,8 +54,8 @@ class WeatherDetailsFragment : BaseFragment<FragmentWeatherDetailsBinding,
 
         // Стан мережі
         NetworkAccess.getOnNetwork().observe(viewLifecycleOwner, object: Observer<Boolean> {
-            override fun onChanged(t: Boolean) {
-                isNetwork = t
+            override fun onChanged(network: Boolean) {
+                isNetwork = network
                 viewModel.getWeatherDetailsFromRepository(currentWeather, isNetwork)
             }
 

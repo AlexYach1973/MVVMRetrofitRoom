@@ -8,7 +8,6 @@ import com.alexyach.kotlin.weatherapi.model.getWorldCities
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.repository.local.IWeatherRoom
-import com.alexyach.kotlin.weatherapi.repository.local.RepositoryRoomImpl
 import com.alexyach.kotlin.weatherapi.utils.NOT_FOUND_CITY
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

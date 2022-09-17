@@ -8,13 +8,8 @@ import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.MutableLiveData
-import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.qualifiers.ApplicationContext
-import java.security.AccessController.getContext
-import javax.inject.Inject
 
-class NetworkAccess (appContext: Context) {
-    val context = appContext
+class NetworkAccess (val context: Context) {
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun initNetworkAccess() {
@@ -33,6 +28,7 @@ class NetworkAccess (appContext: Context) {
                     Log.d("myLogs", "onLost: $network")
                 }
             })
+//        Log.d("myLogs", "NetworkAccess context: $context")
     }
 
 

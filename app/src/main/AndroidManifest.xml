@@ -32,7 +32,7 @@
 
 </manifest>
 
-<!--        Піднімає екран при появи клавіари (пацює і без нього)-->
+<!--        Піднімає екран при появи клавіари (пpацює і без нього)-->
 <!--    android:windowSoftInputMode="adjustResize"-->
 
 <!--    android:roundIcon="@mipmap/ic_launcher_round"-->

@@ -1,7 +1,6 @@
 package com.alexyach.kotlin.weatherapi.room
 
 import androidx.room.*
-import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Single
