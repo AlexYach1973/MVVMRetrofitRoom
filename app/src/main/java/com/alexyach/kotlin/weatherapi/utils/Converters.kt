@@ -6,53 +6,52 @@ import com.alexyach.kotlin.weatherapi.room.WeatherEntity
 import java.text.SimpleDateFormat
 import java.util.*
 
-fun converterWeatherDtoToWeatherModel(weather: WeatherDTO): WeatherModel {
+fun WeatherDTO.toWeatherModel(): WeatherModel {
     val currentDate: String = SimpleDateFormat("dd MMM yyyy hh:mm:ss", Locale.ENGLISH)
         .format(Date())
 
     return WeatherModel(
-        weather.nameDto,
-        weather.coordDto.latDto,
-        weather.coordDto.lonDto,
-        weather.mainDto.tempDto,
-        weather.mainDto.humidityDto,
-        weather.mainDto.pressureDto,
-        weather.weatherDto[0].descriptionDto,
-        currentDate,
-        weather.weatherDto[0].iconDto
+        cityName = nameDto,
+        lat = coordDto.latDto,
+        lon = coordDto.lonDto,
+        temperature = mainDto.tempDto,
+        humidity = mainDto.humidityDto,
+        pressure = mainDto.pressureDto,
+        description = weatherDto[0].descriptionDto,
+        currentDate, weatherDto[0].iconDto
     )
 }
 
-fun converterWeatherEntityToWeatherModel(weather: WeatherEntity) : WeatherModel {
-    return WeatherModel(
-        weather.nameCity,
-        weather.lat,
-        weather.lon,
-        weather.temperature,
-        weather.humidity,
-        weather.pressure,
-        weather.description,
-        weather.date,
-        weather.icon
-    )
-}
+fun WeatherEntity.toWeatherModel() = WeatherModel(
+    cityName = nameCity,
+    lat = lat,
+    lon = lon,
+    temperature = temperature,
+    humidity = humidity,
+    pressure = pressure,
+    description = description,
+    date = date,
+    icon = icon
+)
 
-fun converterWeatherModelToWeatherEntity(weather: WeatherModel) : WeatherEntity {
+fun WeatherModel.toWeatherEntity(): WeatherEntity {
     val currentDate: String = SimpleDateFormat("dd MMM yyyy hh:mm:ss", Locale.ENGLISH)
         .format(Date())
+
     return WeatherEntity(
         0,
-        weather.cityName,
-        weather.temperature,
-        weather.humidity,
-        weather.pressure,
-        weather.lat,
-        weather.lon,
-        weather.description,
+        nameCity = cityName,
+        temperature = temperature,
+        humidity = humidity,
+        pressure = pressure,
+        lat = lat,
+        lon = lon,
+        description = description,
         currentDate,
         "@drawable.ic_network_locked"
     )
 }
+
 
 fun loadImageWeather(str: String): String {
     return when (str) {

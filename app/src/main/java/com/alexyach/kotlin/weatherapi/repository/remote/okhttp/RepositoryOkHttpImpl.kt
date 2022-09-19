@@ -4,7 +4,7 @@ import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.weatherDTO.Weat
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.utils.WEATHER_API_KEY_VALUE
-import com.alexyach.kotlin.weatherapi.utils.converterWeatherDtoToWeatherModel
+import com.alexyach.kotlin.weatherapi.utils.toWeatherModel
 import com.google.gson.Gson
 import okhttp3.*
 import java.io.IOException
@@ -31,9 +31,8 @@ class RepositoryOkHttpImpl : IRepositoryByCityName {
                         in 200..299 -> {
                             val responseString = it.string()
                             val weatherDTO = Gson().fromJson(responseString, WeatherDTO::class.java)
-
                             callbackResponse.onCallbackResponse(
-                                converterWeatherDtoToWeatherModel(weatherDTO)
+                                weatherDTO.toWeatherModel()
                             )
                         }
 

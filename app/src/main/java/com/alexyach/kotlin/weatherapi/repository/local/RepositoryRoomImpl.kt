@@ -1,13 +1,12 @@
 package com.alexyach.kotlin.weatherapi.repository.local
 
 import android.annotation.SuppressLint
-import android.util.Log
 import com.alexyach.kotlin.weatherapi.model.WeatherModel
 import com.alexyach.kotlin.weatherapi.repository.ICallbackResponse
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.room.IWeatherDAO
-import com.alexyach.kotlin.weatherapi.utils.converterWeatherEntityToWeatherModel
-import com.alexyach.kotlin.weatherapi.utils.converterWeatherModelToWeatherEntity
+import com.alexyach.kotlin.weatherapi.utils.toWeatherEntity
+import com.alexyach.kotlin.weatherapi.utils.toWeatherModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import java.io.IOException
@@ -34,7 +33,7 @@ class RepositoryRoomImpl @Inject constructor(
             .subscribe(
                 { weatherEntity ->
                     callbackResponse.onCallbackResponse(
-                        converterWeatherEntityToWeatherModel(weatherEntity)
+                        weatherEntity.toWeatherModel()
                     )
                 },
                 {
@@ -47,7 +46,7 @@ class RepositoryRoomImpl @Inject constructor(
     @SuppressLint("CheckResult")
     override fun getWeatherAll(callback: (List<WeatherModel>) -> Unit) {
 
-        Log.d("myLogs","MainActivity @Inject: $weatherDao")
+//        Log.d("myLogs","MainActivity @Inject: $weatherDao")
 
         // Room
         weatherDao.getWeatherAll()
@@ -56,19 +55,16 @@ class RepositoryRoomImpl @Inject constructor(
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { weatherEntity ->
                 callback(weatherEntity.map {
-                    converterWeatherEntityToWeatherModel(it)
+                    it.toWeatherModel()
                 })
             }
     }
 
     @SuppressLint("CheckResult")
     override fun saveWeatherToRoom(weather: WeatherModel) {
-        val currentDate = SimpleDateFormat("dd MMM yyyy hh:mm:ss", Locale.ENGLISH).format(Date())
-        val weatherEntity = converterWeatherModelToWeatherEntity(weather).apply {
-            date = currentDate
-        }
+
         // Room
-        weatherDao.insertWeather(weatherEntity)
+        weatherDao.insertWeather(weather.toWeatherEntity())
             // Rx
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())

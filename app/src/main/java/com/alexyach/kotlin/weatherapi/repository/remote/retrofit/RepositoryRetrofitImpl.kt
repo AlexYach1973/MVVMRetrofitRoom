@@ -6,7 +6,7 @@ import com.alexyach.kotlin.weatherapi.repository.IRepositoryByCityName
 import com.alexyach.kotlin.weatherapi.repository.IRepositoryByLocation
 import com.alexyach.kotlin.weatherapi.repository.remote.retrofit.weatherDTO.WeatherDTO
 import com.alexyach.kotlin.weatherapi.utils.WEATHER_API_KEY_VALUE
-import com.alexyach.kotlin.weatherapi.utils.converterWeatherDtoToWeatherModel
+import com.alexyach.kotlin.weatherapi.utils.toWeatherModel
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -62,7 +62,7 @@ class RepositoryRetrofitImpl @Inject constructor(
         if (response.body() != null) {
             when (response.code()) {
                 in 200..299 -> callback.onCallbackResponse(
-                    converterWeatherDtoToWeatherModel(response.body()!!)
+                    response.body()!!.toWeatherModel()
                 )
 
                 429 -> callback.onCallbackFailure(IOException("Перевищений ліміт"))
