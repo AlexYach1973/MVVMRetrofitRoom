@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import coil.load
@@ -38,6 +39,8 @@ class WeatherDetailsFragment : BaseFragment<FragmentWeatherDetailsBinding,
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        setupToolbar()
 
         currentWeather = arguments?.run {
             getParcelable<WeatherModel>(KEY_PARAM_WEATHER)
@@ -112,6 +115,12 @@ class WeatherDetailsFragment : BaseFragment<FragmentWeatherDetailsBinding,
         binding.apply {
             detailsFragmentLoadingLayout.visibility = View.GONE
             detailsFragmentConstrLayout.visibility = View.VISIBLE
+        }
+    }
+
+    private fun setupToolbar(){
+        (requireActivity() as AppCompatActivity).supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
         }
     }
 

@@ -31,5 +31,25 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        hideUpButton()
+        super.onBackPressed()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        navigateUp()
+        hideUpButton()
+        return super.onSupportNavigateUp()
+    }
+
+    private fun navigateUp() {
+        if (supportFragmentManager.backStackEntryCount > 0) {
+            supportFragmentManager.popBackStackImmediate()
+        }
+    }
+
+    private fun hideUpButton() {
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+    }
 }
 

@@ -12,6 +12,7 @@ import android.util.Log
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.MenuHost
@@ -53,6 +54,7 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
         super.onViewCreated(view, savedInstanceState)
 
         setupMenu()
+//        setupToolbar()
 
         locationManager =
             requireContext().getSystemService(Context.LOCATION_SERVICE) as LocationManager
@@ -304,6 +306,12 @@ class WeatherListFragment : BaseFragment<FragmentWeatherListBinding,
         val imm =
             context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view?.windowToken, 0)
+    }
+
+    private fun setupToolbar() {
+        (requireActivity() as AppCompatActivity).supportActionBar?.apply {
+            title = "ПОГОДА"
+        }
     }
 
     companion object {
